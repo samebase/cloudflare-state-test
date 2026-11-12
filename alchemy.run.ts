@@ -41,6 +41,7 @@
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { parseEnv } from "node:util";
+import * as Cloudflare from "@alchemy.run/cloudflare";
 import * as Convex from "@samebase/alchemy-convex";
 import * as IdentityHub from "@samebase/alchemy-convex/identity-hub";
 import * as Alchemy from "alchemy";
@@ -92,7 +93,7 @@ export default Alchemy.Stack(
   repository,
   {
     providers: Convex.providers(),
-    state: Convex.withRunRecord(Convex.state()),
+    state: Convex.withRunRecord(Cloudflare.state()),
   },
   Effect.gen(function* () {
     const { stage } = yield* Alchemy.Stack;
