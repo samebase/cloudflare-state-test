@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "IdentityHubClient",
   "logicalId": "IdentityHubClient",
   "instanceId": "cff307c5e1e9d69b15552dcc4f889b9c",
@@ -18,8 +18,39 @@
     "deploymentType": "preview",
     "softwareVersion": "c36dc9584a0413240adf8283918532a1c93c4fc5"
   },
-  "providerVersion": 0,
+  "attr": {
+    "status": "on",
+    "issuer": "https://id.samebase.com",
+    "clientId": "cl_9vLRfnk4RAaeD2hXP_2T3A",
+    "clientSecret": {
+      "__redacted__": {
+        "__sealed__": "v1.BEYBo5aowz2-UiYM.G9BAxTjj4qNA00CcA3kIQCA6b0KOkLf551MQFAygIWHT-wowliPIINGfmoStbrVpw73dsWYGRpOtbiIvrA"
+      }
+    },
+    "registrationAccessToken": {
+      "__redacted__": {
+        "__sealed__": "v1.PTx84Ge2ETuWlhh9.bDHhdTcUW4Q7MYQgQu7OQ3qv0K1l9ybqdMhBgSt23wixefTZp107jTFWwJJ6nUa16zF4ACsi0U7kTH9otg"
+      }
+    },
+    "registrationClientUri": "https://id.samebase.com/register/cl_9vLRfnk4RAaeD2hXP_2T3A",
+    "deploymentType": "preview",
+    "app": "app",
+    "redirectUris": [
+      "https://hip-donkey-721.convex.site/auth/hub/callback"
+    ],
+    "connectors": [
+      "github",
+      "google"
+    ],
+    "initialAccessToken": {
+      "__redacted__": {
+        "__sealed__": "v1.mTJuFF-aYO-3O3qg.sB9ctBx-gHQh4mgvOwrgwODc"
+      }
+    },
+    "repository": ""
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "Site"
   ],
