@@ -1,0 +1,14 @@
+{
+  "url": "https://elated-clam-974.convex.site",
+  "samebase.run": {
+    "version": 1,
+    "repository": "samebase/cloudflare-state-test",
+    "stackFile": "alchemy.run.ts",
+    "branch": "main",
+    "pullRequest": null,
+    "headCommit": "d05a099517b948dd48329195f8553945ad3b3ccd",
+    "runUrl": "https://github.com/samebase/cloudflare-state-test/actions/runs/44175579987/attempts/1",
+    "source": "github-actions",
+    "recordedAt": "2026-11-17T21:03:46.486Z"
+  }
+}
