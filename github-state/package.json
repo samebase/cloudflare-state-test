@@ -1,0 +1,16 @@
+{
+  "name": "github-state-spike",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@alchemy.run/github": "https://pkg.alchemy.run/@alchemy.run/github/pr:3167:bb9a249",
+    "@effect/platform-node": "^4.1.4",
+    "@types/node": "^26.6.6",
+    "alchemy": "https://pkg.alchemy.run/alchemy/pr:3167:bb9a249",
+    "effect": "^4.1.4",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  }
+}
