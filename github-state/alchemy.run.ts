@@ -1,5 +1,6 @@
 // The spike stack of `@samebase/alchemy-kit/github-state`: harmless resources whose state goes to the branch
 // `alchemy-state-store` of this repository, secrets sealed with the key ALCHEMY_GITHUB_STATE_KEY.
+// `withRunRecord` adds the record of the run to each stage output, under `samebase.run`.
 //
 // - `GitHub.Label` `spike-<stage>`: a real resource, managed with the run's GitHub token.
 // - `Alchemy.Random`: its OUTPUT `text` is a secret.
@@ -8,6 +9,7 @@
 // The stage `scale` has 40 Random resources and nothing else.
 import * as GitHub from "@alchemy.run/github";
 import * as GitHubState from "@samebase/alchemy-kit/github-state";
+import { withRunRecord } from "@samebase/alchemy-kit/run-record";
 import * as Alchemy from "alchemy";
 import * as Provider from "alchemy/Provider";
 import { Resource } from "alchemy/Resource";
@@ -31,7 +33,7 @@ export default Alchemy.Stack(
   "github-state-spike",
   {
     providers: Layer.mergeAll(GitHub.providers(), Alchemy.RandomProvider(), NoteProvider()),
-    state: GitHubState.state(),
+    state: withRunRecord(GitHubState.state()),
   },
   Effect.gen(function* () {
     const { stage } = yield* Alchemy.Stack;
