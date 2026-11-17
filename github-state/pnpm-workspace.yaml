@@ -1,1 +1,4 @@
 packages: []
+# pnpm refuses a release that is less than a day old. Our own package installs on its release day.
+minimumReleaseAgeExclude:
+  - "@samebase/*"
