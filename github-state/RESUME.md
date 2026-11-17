@@ -1,4 +1,4 @@
-CURRENT: the spike runs on the packed `@samebase/alchemy-kit`. Stages `demo` and `ci` are deployed.
+CURRENT: the spike runs on `@samebase/alchemy-kit@0.1.0` from npm (published 2026-11-17; the vendor tarball is removed). Stages `demo` and `ci` are deployed.
 
 # Moved onto @samebase/alchemy-kit (2026-11-17)
 

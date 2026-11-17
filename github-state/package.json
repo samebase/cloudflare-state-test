@@ -5,7 +5,7 @@
   "dependencies": {
     "@alchemy.run/github": "2.0.0-beta.85",
     "@effect/platform-node": "^4.1.4",
-    "@samebase/alchemy-kit": "file:./vendor/samebase-alchemy-kit-0.1.0.tgz",
+    "@samebase/alchemy-kit": "0.1.0",
     "@types/node": "^26.6.6",
     "alchemy": "2.0.0-beta.85",
     "effect": "^4.1.4",
