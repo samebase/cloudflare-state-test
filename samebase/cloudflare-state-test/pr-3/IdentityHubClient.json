@@ -3,9 +3,7 @@
   "fqn": "IdentityHubClient",
   "logicalId": "IdentityHubClient",
   "instanceId": "f99abe7d399269b6527ac3f5a9c8fdf5",
-  "downstream": [
-    "Site"
-  ],
+  "resourceType": "IdentityHub.Client",
   "props": {
     "hub": {
       "issuer": "https://id.samebase.com"
@@ -21,8 +19,10 @@
     "softwareVersion": "a3c194d15d7b83a8108984b4a928d270d110d67c"
   },
   "providerVersion": 0,
-  "resourceType": "IdentityHub.Client",
   "bindings": [],
+  "downstream": [
+    "Site"
+  ],
   "removalPolicy": "destroy",
   "propsIncomplete": true
 }
