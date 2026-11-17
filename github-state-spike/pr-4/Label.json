@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Label",
   "logicalId": "Label",
   "instanceId": "c384fbd35ea4da25230db48fb7a34cc6",
@@ -11,8 +11,17 @@
     "color": "c5def5",
     "description": "GitHub state store spike, stage pr-4"
   },
-  "providerVersion": 0,
+  "attr": {
+    "labelId": 13121917899,
+    "nodeId": "LA_kwDOVsRRkc8AAAADDiCTyw",
+    "name": "spike-pr-4",
+    "color": "c5def5",
+    "description": "GitHub state store spike, stage pr-4",
+    "url": "https://api.github.com/repos/samebase/cloudflare-state-test/labels/spike-pr-4",
+    "default": false
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
   "removalPolicy": "destroy"
 }
