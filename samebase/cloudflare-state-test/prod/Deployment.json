@@ -1,0 +1,36 @@
+{
+  "status": "creating",
+  "fqn": "Deployment",
+  "logicalId": "Deployment",
+  "instanceId": "54db56d449ba3346ef82179abbb36e60",
+  "downstream": [
+    "IdentityHubClient"
+  ],
+  "props": {
+    "type": "prod",
+    "source": {
+      "path": "./convex",
+      "command": [
+        "node",
+        "--run",
+        "deploy"
+      ],
+      "include": [
+        "src/**",
+        "public/**",
+        "scripts/**",
+        "vite.config.ts",
+        "tsconfig*.json"
+      ]
+    },
+    "env": {
+      "SAMEBASE_REPOSITORY_ID": "1455706513"
+    },
+    "rootDir": "."
+  },
+  "providerVersion": 0,
+  "resourceType": "Convex.Deployment",
+  "bindings": [],
+  "removalPolicy": "retain",
+  "propsIncomplete": true
+}

@@ -1,0 +1,17 @@
+{
+  "status": "creating",
+  "fqn": "Site",
+  "logicalId": "Site",
+  "instanceId": "93802826262d629283ba8fa155e36dce",
+  "downstream": [],
+  "props": {
+    "type": "prod",
+    "env": {},
+    "rootDir": "."
+  },
+  "providerVersion": 0,
+  "resourceType": "Convex.Deployment",
+  "bindings": [],
+  "removalPolicy": "retain",
+  "propsIncomplete": true
+}

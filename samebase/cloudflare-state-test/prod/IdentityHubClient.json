@@ -1,0 +1,28 @@
+{
+  "status": "creating",
+  "fqn": "IdentityHubClient",
+  "logicalId": "IdentityHubClient",
+  "instanceId": "54b809a88b306b1521d4c30030aa8868",
+  "downstream": [
+    "Site"
+  ],
+  "props": {
+    "hub": {
+      "issuer": "https://id.samebase.com"
+    },
+    "connectors": [
+      "google",
+      "github"
+    ],
+    "redirectUris": [
+      null
+    ],
+    "deploymentType": "production",
+    "softwareVersion": "d05a099517b948dd48329195f8553945ad3b3ccd"
+  },
+  "providerVersion": 0,
+  "resourceType": "IdentityHub.Client",
+  "bindings": [],
+  "removalPolicy": "destroy",
+  "propsIncomplete": true
+}
