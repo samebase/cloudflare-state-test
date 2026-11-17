@@ -13,7 +13,7 @@
       "github"
     ],
     "redirectUris": [
-      null
+      "https://zany-hound-683.convex.site/auth/hub/callback"
     ],
     "deploymentType": "preview",
     "softwareVersion": "af988fa31476d39fccc6d135d13af95e379b42b5"
@@ -23,6 +23,5 @@
   "downstream": [
     "Site"
   ],
-  "removalPolicy": "destroy",
-  "propsIncomplete": true
+  "removalPolicy": "destroy"
 }
