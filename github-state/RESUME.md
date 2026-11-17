@@ -33,13 +33,13 @@ CURRENT: the spike runs on `@samebase/alchemy-kit@0.1.0` from npm (published 202
 
 ## Laptop, stage demo
 
-| Run | Result | Wall time | State commits |
-|---|---|---|---|
-| 1. first deploy | `Plan: 3 to create`, `Done: 3 succeeded (31.5s)` | 42 s | 7 |
-| 2. same again | no changes, `Done: 0 succeeded (1.8s)` | 11 s | 0 |
-| 3. `SPIKE_NOTE=second` | 1 update (Note), `Done: 1 succeeded (6.5s)` | 17 s | 3 |
-| 4. same as 3 again | `Plan: no changes` | 11 s | 0 |
-| 5. without the key | stops: `ALCHEMY_GITHUB_STATE_KEY is not set`, exit 1 | not timed | 0, lock 0 |
+| Run                    | Result                                               | Wall time | State commits |
+| ---------------------- | ---------------------------------------------------- | --------- | ------------- |
+| 1. first deploy        | `Plan: 3 to create`, `Done: 3 succeeded (31.5s)`     | 42 s      | 7             |
+| 2. same again          | no changes, `Done: 0 succeeded (1.8s)`               | 11 s      | 0             |
+| 3. `SPIKE_NOTE=second` | 1 update (Note), `Done: 1 succeeded (6.5s)`          | 17 s      | 3             |
+| 4. same as 3 again     | `Plan: no changes`                                   | 11 s      | 0             |
+| 5. without the key     | stops: `ALCHEMY_GITHUB_STATE_KEY is not set`, exit 1 | not timed | 0, lock 0     |
 
 Each run made a take and a release commit on the lock branch; run 1 also renewed the lock once.
 
@@ -64,11 +64,11 @@ FIRST RESULT: works. ALL CHECKS DONE (A to I). Report: /Users/nicu/dev/samebase/
 
 ## A. Laptop deploys, stage demo (2026-11-17, 02:49 to 02:50)
 
-| Run | Result | Wall time | API calls by the store (POST/PATCH) | Commits alchemy-state | Commits alchemy-state-lock | Core rate limit (gh api rate_limit) |
-|---|---|---|---|---|---|---|
-| 1. first deploy, 3 creates | ok | 18 s | 41 (24) | 6 | 2 | 4964 -> 4947 |
-| 2. same again | ok, "Plan: no changes" | 10 s | 27 (6) | 0 | 2 | 4943 -> 4922 |
-| 3. change Note's input `text` | ok, 1 update | 15 s | 37 (15) | 3 | 2 | 4918 -> 4896 |
+| Run                           | Result                 | Wall time | API calls by the store (POST/PATCH) | Commits alchemy-state | Commits alchemy-state-lock | Core rate limit (gh api rate_limit) |
+| ----------------------------- | ---------------------- | --------- | ----------------------------------- | --------------------- | -------------------------- | ----------------------------------- |
+| 1. first deploy, 3 creates    | ok                     | 18 s      | 41 (24)                             | 6                     | 2                          | 4964 -> 4947                        |
+| 2. same again                 | ok, "Plan: no changes" | 10 s      | 27 (6)                              | 0                     | 2                          | 4943 -> 4922                        |
+| 3. change Note's input `text` | ok, 1 update           | 15 s      | 37 (15)                             | 3                     | 2                          | 4918 -> 4896                        |
 
 Rate limit numbers include the `gh api` calls of the measuring script and the Label provider's own calls.
 The `x-ratelimit-remaining` header the store saw jumped around (run 2: 4942 -> 4949, up), so it is
@@ -78,6 +78,7 @@ Lease: each deploy made 2 commits on the lock branch (take, release). No 20 s re
 each run was under 20 s.
 
 Fixes needed to get here (findings, details in the report):
+
 - pnpm refused the PR preview of `@alchemy.run/github` (its `@distilled.cloud/github` dependency is a
   URL): `ERR_PNPM_EXOTIC_SUBDEP`. Needed `blockExoticSubdeps: false`.
 - `GitHubState.state().pipe(Layer.provide(passphraseEncryption()))`, the PR's documented form, does
@@ -94,6 +95,7 @@ the rest is JSON with `{"__sealed__": "..."}` for each secret. Label.json (no se
 Sealed: Secret.json `attr.text` (an OUTPUT) and Note.json `props.secret` (an INPUT prop).
 
 CLI with the slashed stack name:
+
 - `alchemy state ls` -> `samebase/` (the first path segment, not the stack).
 - `alchemy state ls samebase` -> `samebase/cloudflare-state-test/` (stack "samebase", stage "cloudflare-state-test").
 - `alchemy state ls .../demo` -> lists Label, Note, Secret plus a bogus `demo//` (decodeFqn of `__stack_output__`).
@@ -136,6 +138,7 @@ the GCS and S3 stores have no BucketObjects suite, `@alchemy.run/test` has none.
 throwaway branch `alchemy-state-test-<random>`, both branches deleted at the end (204, 204).
 
 Run twice, 10/10 passed each time, 57 s. Results:
+
 - ifAbsent creates the branch (root commit with README.md), second ifAbsent refused.
 - Read right after write: 10/10 reads saw the new blob sha. No read-after-write lag seen.
 - ifVersion stale loses, current wins. Conditional delete: wrong version keeps, right deletes, missing ok.
@@ -158,10 +161,10 @@ Run twice, 10/10 passed each time, 57 s. Results:
 
 ## H. Scale, stage `scale` with 40 Random (laptop)
 
-| Run | Wall | Apply | API calls (POST/PATCH) | State commits | Lock commits | Core limit (gh) | 403/429 |
-|---|---|---|---|---|---|---|---|
-| deploy, 40 creates | 39 s | 31.4 s | 175 (42) | 11 | 3 | 4805 -> 4672 (-133) | none |
-| destroy, 40 deletes | 50 s | 41.8 s | 301 (42) | 10 | 4 | 4668 -> 4409 (-259) | none |
+| Run                 | Wall | Apply  | API calls (POST/PATCH) | State commits | Lock commits | Core limit (gh)     | 403/429 |
+| ------------------- | ---- | ------ | ---------------------- | ------------- | ------------ | ------------------- | ------- |
+| deploy, 40 creates  | 39 s | 31.4 s | 175 (42)               | 11            | 3            | 4805 -> 4672 (-133) | none    |
+| destroy, 40 deletes | 50 s | 41.8 s | 301 (42)               | 10            | 4            | 4668 -> 4409 (-259) | none    |
 
 - Batching works: 80 record writes on deploy became 11 commits.
 - The core limit dropped by exactly the number of GETs (133 = 175 - 42; 259 = 301 - 42). The Git
@@ -193,4 +196,3 @@ ones. `plan --stage demo` after the rename read the state: Label and Secret noop
   verified`. My laptop has pnpm 11.0.8, which wrote no integrity for the PR's URL tarballs. Fix:
   regenerated the lockfile with pnpm 12.16.1 (adds sha512 integrity), checked a frozen install in a
   clean folder. Run 2 next.
-
