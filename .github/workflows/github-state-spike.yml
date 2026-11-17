@@ -1,10 +1,14 @@
 # Spike: deploys github-state/alchemy.run.ts, stage `ci`, with its Alchemy state on the branch
-# `alchemy-state-store` of this repository. The only credentials are the run's own token and the
-# passphrase that seals secret values in the state.
+# `alchemy-state-store` of this repository, through `@samebase/alchemy-github`. The only credentials
+# are the run's own token and the key ALCHEMY_GITHUB_STATE_KEY that seals secret values in the
+# state.
+#
+# To deploy the stage `ci`, push the head of `github-state` plus one empty commit to the branch
+# `github-state-run`. A push to `github-state` itself would also start the template's pull request
+# workflows.
 on:
   push:
-    branches: [github-state]
-    paths: [github-state/**, .github/workflows/github-state-spike.yml]
+    branches: [github-state-run]
 permissions: { contents: write, issues: write }
 jobs:
   deploy:
@@ -27,4 +31,4 @@ jobs:
         run: pnpm exec alchemy deploy --stage ci --yes --no-input
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          ALCHEMY_STATE_PASSPHRASE: ${{ secrets.ALCHEMY_STATE_PASSPHRASE }}
+          ALCHEMY_GITHUB_STATE_KEY: ${{ secrets.ALCHEMY_GITHUB_STATE_KEY }}

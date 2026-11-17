@@ -1,5 +1,5 @@
-// The spike stack of the GitHub state store: harmless resources whose state goes to the branch
-// `alchemy-state-store` of this repository, secrets sealed with ALCHEMY_STATE_PASSPHRASE.
+// The spike stack of `@samebase/alchemy-github`: harmless resources whose state goes to the branch
+// `alchemy-state-store` of this repository, secrets sealed with the key ALCHEMY_GITHUB_STATE_KEY.
 //
 // - `GitHub.Label` `spike-<stage>`: a real resource, managed with the run's GitHub token.
 // - `Alchemy.Random`: its OUTPUT `text` is a secret.
@@ -7,14 +7,13 @@
 //   so the state holds a sealed input prop too.
 // The stage `scale` has 40 Random resources and nothing else.
 import * as GitHub from "@alchemy.run/github";
+import * as GitHubState from "@samebase/alchemy-github";
 import * as Alchemy from "alchemy";
 import * as Provider from "alchemy/Provider";
 import { Resource } from "alchemy/Resource";
-import { passphraseEncryption } from "alchemy/State/PassphraseEncryption";
 import * as Effect from "effect/Effect";
 import * as Layer from "effect/Layer";
 import type * as Redacted from "effect/Redacted";
-import * as GitHubState from "./src/GitHubState.ts";
 
 type Note = Resource<
   "Spike.Note",
@@ -29,20 +28,10 @@ const NoteProvider = () =>
   });
 
 export default Alchemy.Stack(
-  "samebase/cloudflare-state-test/github-state-spike",
+  "github-state-spike",
   {
     providers: Layer.mergeAll(GitHub.providers(), Alchemy.RandomProvider(), NoteProvider()),
-    // SPIKE_NO_ENCRYPTION=1 reads the store as a reader without the key would (check C).
-    state:
-      process.env["SPIKE_NO_ENCRYPTION"] === "1"
-        ? GitHubState.state({ repository: "samebase/cloudflare-state-test" })
-        : GitHubState.state({ repository: "samebase/cloudflare-state-test" }).pipe(
-            Layer.provide(passphraseEncryption()),
-            // passphraseEncryption() fails with StateStoreError without a passphrase; the
-            // stack's `state` must have error type never, so the PR's documented form does
-            // not type-check.
-            Layer.orDie,
-          ),
+    state: GitHubState.state(),
   },
   Effect.gen(function* () {
     const { stage } = yield* Alchemy.Stack;

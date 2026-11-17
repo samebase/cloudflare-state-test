@@ -3,14 +3,12 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@alchemy.run/github": "https://pkg.alchemy.run/@alchemy.run/github/pr:3167:bb9a249",
+    "@alchemy.run/github": "2.0.0-beta.85",
     "@effect/platform-node": "^4.1.4",
+    "@samebase/alchemy-github": "file:./vendor/samebase-alchemy-github-0.1.0.tgz",
     "@types/node": "^26.6.6",
-    "alchemy": "https://pkg.alchemy.run/alchemy/pr:3167:bb9a249",
+    "alchemy": "2.0.0-beta.85",
     "effect": "^4.1.4",
     "typescript": "^7.0.2"
-  },
-  "devDependencies": {
-    "vitest": "5.0.5"
   }
 }
