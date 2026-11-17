@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "11e484fef74ba6f9bbf4b622398fde86",
@@ -20,7 +20,7 @@
       "IDENTITY_HUB_CLIENT_ID": "cl_9vLRfnk4RAaeD2hXP_2T3A",
       "IDENTITY_HUB_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.Sh0OWRUmtPTU7GA0.XQDsVL1sNU2fiBep604AG7dHqifYh74T8cKub-1tIsbLiHcdOhnFKHn1yWGgAkDk3lmFlaHMBBQh8ShRNQ"
+          "__sealed__": "v1.XyDi9JP4ixpz0352.ArluOKczoGHLSVd_k9nndhxJfG9oled9Pwm1Q6LR0mUVGu742tiRTIztvkxTD6DmuGyss4iY842BP5N_5A"
         }
       }
     },
@@ -41,56 +41,8 @@
       "IDENTITY_HUB_ISSUER"
     ]
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
-  "old": {
-    "status": "created",
-    "fqn": "Site",
-    "logicalId": "Site",
-    "instanceId": "11e484fef74ba6f9bbf4b622398fde86",
-    "resourceType": "Convex.Deployment",
-    "props": {
-      "project": {
-        "projectId": 3426180,
-        "slug": "cloudflare-state-test",
-        "name": "cloudflare-state-test",
-        "teamId": 38516,
-        "prodDeploymentName": "elated-clam-974",
-        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
-      },
-      "type": "preview",
-      "name": "pr-4",
-      "env": {
-        "IDENTITY_HUB_ISSUER": "https://id.samebase.com",
-        "IDENTITY_HUB_CLIENT_ID": "cl_9vLRfnk4RAaeD2hXP_2T3A",
-        "IDENTITY_HUB_CLIENT_SECRET": {
-          "__redacted__": {
-            "__sealed__": "v1.7WU169qr0cEIaVzO.YZJtkMCHQNo7pc6vlX1CmvD3uPZVWsj75hppvGGm_Rbjfh9V5M56rdobZoB5lLSuk3NCEVwX7oPFNlZLmg"
-          }
-        }
-      },
-      "rootDir": "."
-    },
-    "attr": {
-      "projectId": 3426180,
-      "type": "preview",
-      "name": "hip-donkey-721",
-      "reference": "preview/pr-4",
-      "previewName": "pr-4",
-      "url": "https://hip-donkey-721.convex.cloud",
-      "siteUrl": "https://hip-donkey-721.convex.site",
-      "hash": "6e9308143c7c733a12b13a82ef6822a5834d22202a314b45d2118fd1a5cc0706",
-      "envNames": [
-        "IDENTITY_HUB_CLIENT_ID",
-        "IDENTITY_HUB_CLIENT_SECRET",
-        "IDENTITY_HUB_ISSUER"
-      ]
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [],
-    "removalPolicy": "destroy"
-  },
   "removalPolicy": "destroy"
 }
