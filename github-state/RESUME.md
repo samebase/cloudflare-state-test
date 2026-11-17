@@ -122,6 +122,10 @@ marks where a deploy starts or ends.
 Destroyed `ci` (52 calls, 5 state commits), `scale`, `d2a`, `d2b`. Kept `demo` and the label
 `spike-demo`. Throwaway test branches deleted. Branches left: alchemy-state, alchemy-state-lock.
 
+Later on 2026-11-17: the default branch name became `alchemy-state-store` (lock:
+`alchemy-state-store-lock`). Both branches were renamed on GitHub, so the names above are the old
+ones. `plan --stage demo` after the rename read the state: Label and Secret noop.
+
 - Spike commit f9dae76 pushed to `github-state`. Only the spike workflow ran (alchemy.yml and
   ci.yml trigger on main and pull requests only).
 - Run 1 (43992241143): FAILED at `pnpm install --frozen-lockfile` with pnpm 12.16.1: `5 lockfile

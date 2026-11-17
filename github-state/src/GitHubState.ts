@@ -33,7 +33,7 @@ import * as Scope from "effect/Scope";
 export interface GitHubStateOptions {
   /** `owner/name`. @default GITHUB_REPOSITORY, else the `origin` remote */
   readonly repository?: string;
-  /** @default "alchemy-state" */
+  /** @default "alchemy-state-store" */
   readonly branch?: string;
 }
 
@@ -186,7 +186,7 @@ export const makeGitHubObjects = (options: GitHubStateOptions = {}) =>
       return yield* fail("GitHub state store: set GITHUB_TOKEN or GH_TOKEN");
     }
     const repository = yield* resolveRepository(options.repository);
-    const stateBranch = options.branch ?? "alchemy-state";
+    const stateBranch = options.branch ?? "alchemy-state-store";
     const repoPath = `/repos/${encodePath(repository)}`;
 
     const stats = {

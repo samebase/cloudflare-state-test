@@ -1,5 +1,5 @@
 // The spike stack of the GitHub state store: harmless resources whose state goes to the branch
-// `alchemy-state` of this repository, secrets sealed with ALCHEMY_STATE_PASSPHRASE.
+// `alchemy-state-store` of this repository, secrets sealed with ALCHEMY_STATE_PASSPHRASE.
 //
 // - `GitHub.Label` `spike-<stage>`: a real resource, managed with the run's GitHub token.
 // - `Alchemy.Random`: its OUTPUT `text` is a secret.

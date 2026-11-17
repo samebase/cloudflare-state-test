@@ -1,5 +1,5 @@
 # Spike: deploys github-state/alchemy.run.ts, stage `ci`, with its Alchemy state on the branch
-# `alchemy-state` of this repository. The only credentials are the run's own token and the
+# `alchemy-state-store` of this repository. The only credentials are the run's own token and the
 # passphrase that seals secret values in the state.
 on:
   push:
