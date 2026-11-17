@@ -87,3 +87,13 @@ Run twice, 10/10 passed each time, 57 s. Results:
 - Lease key goes only to the `-lock` branch.
 - A serial write costs about 1.8 s (10 writes plus 10 reads: 18.4 s) and 3 POST/PATCH calls.
 
+## G. GitHub Actions (in progress)
+
+- Spike commit f9dae76 pushed to `github-state`. Only the spike workflow ran (alchemy.yml and
+  ci.yml trigger on main and pull requests only).
+- Run 1 (43992241143): FAILED at `pnpm install --frozen-lockfile` with pnpm 12.16.1: `5 lockfile
+  entries failed verification: ... has no "integrity" field, so its downloaded tarball cannot be
+  verified`. My laptop has pnpm 11.0.8, which wrote no integrity for the PR's URL tarballs. Fix:
+  regenerated the lockfile with pnpm 12.16.1 (adds sha512 integrity), checked a frozen install in a
+  clean folder. Run 2 next.
+

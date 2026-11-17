@@ -34,14 +34,14 @@ importers:
 packages:
 
   '@alchemy.run/github@https://pkg.alchemy.run/@alchemy.run/github/pr:3167:bb9a249':
-    resolution: {tarball: https://pkg.alchemy.run/@alchemy.run/github/-/29d91a16f31ea9ae0fae1baaf4eb1e4b6de205e8a58eeb278c82428af2bf470e.tgz}
+    resolution: {integrity: sha512-Vu0OVX0ht9zJvYzX/E3MW9iK0UV9Go+HjRaVFNxqUmFaNPwG9jMVqf3XwKG/faZm+JyQDr2I9RKhGfI+IkZJMg==, tarball: https://pkg.alchemy.run/@alchemy.run/github/-/29d91a16f31ea9ae0fae1baaf4eb1e4b6de205e8a58eeb278c82428af2bf470e.tgz}
     version: 2.0.0-beta.85
     peerDependencies:
       alchemy: https://pkg.alchemy.run/alchemy/-/b6cff9a6558adaece68c003a1f13f4d295282018e31e10c4efaab49d12eff7d3.tgz
       effect: ^4.1.0
 
   '@alchemy.run/node-utils@https://pkg.alchemy.run/@alchemy.run/node-utils/-/7ca778b6ff66b8a15b532535f1227c058382469f80ed51008909ddadfef5d42f.tgz':
-    resolution: {tarball: https://pkg.alchemy.run/@alchemy.run/node-utils/-/7ca778b6ff66b8a15b532535f1227c058382469f80ed51008909ddadfef5d42f.tgz}
+    resolution: {integrity: sha512-7tnqQqAvc7XZmKmDkG5PUqAiY6lauSzO+n//JybZ+g4oeooORf9I+Kx6wjnl46dLX6D6xy3XfUmMmRZR8KGREA==, tarball: https://pkg.alchemy.run/@alchemy.run/node-utils/-/7ca778b6ff66b8a15b532535f1227c058382469f80ed51008909ddadfef5d42f.tgz}
     version: 2.0.0-beta.85
 
   '@alchemy.run/sigil@0.1.0-alpha.3':
@@ -57,13 +57,13 @@ packages:
         optional: true
 
   '@distilled.cloud/core@https://pkg.alchemy.run/@distilled.cloud/core/-/3945144f37736e1395d08c31e60606cb32f8a2398121d0bd139e54a331f2834b.tgz':
-    resolution: {tarball: https://pkg.alchemy.run/@distilled.cloud/core/-/3945144f37736e1395d08c31e60606cb32f8a2398121d0bd139e54a331f2834b.tgz}
+    resolution: {integrity: sha512-uyAQ1tMKkkUqXcl9Ishej/75VJtWOpOpsUVK0QH2s9DUP+mzld2tYer2Dq9MwQZlPAU71wfHrabxVChVqV0C6g==, tarball: https://pkg.alchemy.run/@distilled.cloud/core/-/3945144f37736e1395d08c31e60606cb32f8a2398121d0bd139e54a331f2834b.tgz}
     version: 1.0.0-rc.18
     peerDependencies:
       effect: ^4.1.2
 
   '@distilled.cloud/github@https://pkg.alchemy.run/@distilled.cloud/github/-/f721d5ffd795a19488b50bb2df78bf126f519e5a61e5a04bf5e0a5ed46d86f8a.tgz':
-    resolution: {tarball: https://pkg.alchemy.run/@distilled.cloud/github/-/f721d5ffd795a19488b50bb2df78bf126f519e5a61e5a04bf5e0a5ed46d86f8a.tgz}
+    resolution: {integrity: sha512-M5zYi1lcWhHV/pujGI6Q6Bd5kAIAeWjiwm5WhyIfFo4LK1rYGoguKPuPZlddklMUfd1SmT7c+4hUXTwDS12NxQ==, tarball: https://pkg.alchemy.run/@distilled.cloud/github/-/f721d5ffd795a19488b50bb2df78bf126f519e5a61e5a04bf5e0a5ed46d86f8a.tgz}
     version: 1.0.0-rc.18
     peerDependencies:
       effect: ^4.1.2
@@ -499,7 +499,7 @@ packages:
     resolution: {integrity: sha512-lwJRExuH417257Q5wv9QYugN9IMJkoxcrKrYxGPQkBzl7wlNpTUxD/5yNX4ESKVUIShKPgkGchYPFMWOOk0wzw==}
 
   alchemy@https://pkg.alchemy.run/alchemy/pr:3167:bb9a249:
-    resolution: {tarball: https://pkg.alchemy.run/alchemy/-/b6cff9a6558adaece68c003a1f13f4d295282018e31e10c4efaab49d12eff7d3.tgz}
+    resolution: {integrity: sha512-BNCqa6SZ00D8K7a/XXeXYhfELPnGxqK3/MSvqJ8jRUUogoA4bcYb3tsdm1gdoQJooQkjulEtjsoIHlBcnauwHQ==, tarball: https://pkg.alchemy.run/alchemy/-/b6cff9a6558adaece68c003a1f13f4d295282018e31e10c4efaab49d12eff7d3.tgz}
     version: 2.0.0-beta.85
     hasBin: true
     peerDependencies:
