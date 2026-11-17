@@ -1,3 +1,51 @@
+CURRENT: the spike runs on the packed `@samebase/alchemy-github`. Stages `demo` and `ci` are deployed.
+
+# Moved onto @samebase/alchemy-github (2026-11-17)
+
+## What changed
+
+- The spike's own store (`src/GitHubState.ts` and its live test) is gone. The stack uses
+  `@samebase/alchemy-github` with `state: GitHubState.state()` and no options.
+- The tarball `vendor/samebase-alchemy-github-0.1.0.tgz` was packed with `pnpm pack` from
+  `packages/alchemy-github` of samebase/samebase at commit 76f329a77. When the package is on npm,
+  the npm version replaces the tarball.
+- Released packages only: `alchemy` and `@alchemy.run/github` `2.0.0-beta.85`. No preview packages,
+  so `blockExoticSubdeps: false` is gone too. `vitest` is gone.
+- The stack name is `github-state-spike` (no slashes, so the Alchemy CLI can address it).
+- Secrets are sealed with the key `ALCHEMY_GITHUB_STATE_KEY` (base64 of 32 bytes): the laptop reads
+  it from `.state-key` (mode 600, ignored by git), Actions from the repository secret of the same
+  name. The passphrase, its secret and `.passphrase` are deleted.
+- The workflow runs on a push to `github-state-run`, not to `github-state`.
+- Before the move, the old code destroyed the old stage `demo` (3 deleted, 20.8 s), and both old
+  branches were deleted. The package made them again on its first write.
+
+## Laptop, stage demo
+
+| Run | Result | Wall time | State commits |
+|---|---|---|---|
+| 1. first deploy | `Plan: 3 to create`, `Done: 3 succeeded (31.5s)` | 42 s | 7 |
+| 2. same again | no changes, `Done: 0 succeeded (1.8s)` | 11 s | 0 |
+| 3. `SPIKE_NOTE=second` | 1 update (Note), `Done: 1 succeeded (6.5s)` | 17 s | 3 |
+| 4. same as 3 again | `Plan: no changes` | 11 s | 0 |
+| 5. without the key | stops: `ALCHEMY_GITHUB_STATE_KEY is not set`, exit 1 | not timed | 0, lock 0 |
+
+Each run made a take and a release commit on the lock branch; run 1 also renewed the lock once.
+
+## GitHub Actions, stage ci
+
+- [Run 44124446883](https://github.com/samebase/cloudflare-state-test/actions/runs/44124446883):
+  green, `Plan: 3 to create`, `Done: 3 succeeded (9.9s)`, 40 s in all, 6 state commits.
+- [Run 44124643444](https://github.com/samebase/cloudflare-state-test/actions/runs/44124643444):
+  green, `Plan: no changes`. Actions opened the sealed state with the secret key.
+
+## Records
+
+A record is plain JSON. A secret is `{"__redacted__": {"__sealed__": "v1.<iv>.<ciphertext>"}}`:
+`Secret.json` `attr.text` (an output) and `Note.json` `props.secret` (an input prop). There is no
+`__alchemy_store__.json` any more.
+
+# Older log: the spike's own store (history)
+
 FIRST RESULT: works. ALL CHECKS DONE (A to I). Report: /Users/nicu/dev/samebase/reports/github-state-store-spike-2026-11-17.md
 
 # GitHub state store spike: progress
