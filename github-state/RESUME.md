@@ -1,4 +1,4 @@
-FIRST RESULT: works. Checks A to F done (D found a store bug, fixed). Next: G (GitHub Actions).
+FIRST RESULT: works. ALL CHECKS DONE (A to I). Report: /Users/nicu/dev/samebase/reports/github-state-store-spike-2026-11-17.md
 
 # GitHub state store spike: progress
 
@@ -87,7 +87,40 @@ Run twice, 10/10 passed each time, 57 s. Results:
 - Lease key goes only to the `-lock` branch.
 - A serial write costs about 1.8 s (10 writes plus 10 reads: 18.4 s) and 3 POST/PATCH calls.
 
-## G. GitHub Actions (in progress)
+## G. GitHub Actions (done, 3 runs)
+
+- Run 2 (43992418604, commit 4d75c78): success, 38 s job. Deploy stage ci: 3 creates, 8.6 s apply,
+  40 API calls (21 POST/PATCH), 5 state commits, 2 lock commits. Credentials: `github.token` and
+  the passphrase secret only. The Label provider also used `github.token` ("using environment
+  variables (GITHUB_TOKEN, GITHUB_API_URL)"). x-ratelimit-remaining 4993 -> 4973.
+- Run 3 (re-run of 43992418604, attempt 2): success, `Plan: no changes`, 27 calls (6 POST/PATCH),
+  0 state commits, 2 lock commits.
+
+## H. Scale, stage `scale` with 40 Random (laptop)
+
+| Run | Wall | Apply | API calls (POST/PATCH) | State commits | Lock commits | Core limit (gh) | 403/429 |
+|---|---|---|---|---|---|---|---|
+| deploy, 40 creates | 39 s | 31.4 s | 175 (42) | 11 | 3 | 4805 -> 4672 (-133) | none |
+| destroy, 40 deletes | 50 s | 41.8 s | 301 (42) | 10 | 4 | 4668 -> 4409 (-259) | none |
+
+- Batching works: 80 record writes on deploy became 11 commits.
+- The core limit dropped by exactly the number of GETs (133 = 175 - 42; 259 = 301 - 42). The Git
+  Data API POST/PATCH calls do not seem to count against `core`. Reads dominate: about 3 GETs per
+  resource on deploy and 6 per resource on destroy (Contents API, one call per record read).
+- Every resource waits for its state commit, so 40 instant Random creates took 31 s.
+- After destroy: no file under `/scale/` on alchemy-state; alchemy-state-lock holds only README.md.
+
+## I. History
+
+alchemy-state: 66 commits after all checks, alchemy-state-lock: 50. Laptop commits are authored by
+the gh user, CI commits by github-actions[bot]. Each commit names stack, stage and records
+("scale: delete Random33, Random34, ..."). A deploy is many commits (one per batch), and nothing
+marks where a deploy starts or ends.
+
+## Cleanup
+
+Destroyed `ci` (52 calls, 5 state commits), `scale`, `d2a`, `d2b`. Kept `demo` and the label
+`spike-demo`. Throwaway test branches deleted. Branches left: alchemy-state, alchemy-state-lock.
 
 - Spike commit f9dae76 pushed to `github-state`. Only the spike workflow ran (alchemy.yml and
   ci.yml trigger on main and pull requests only).
