@@ -1,4 +1,16 @@
-CURRENT: the spike runs on the packed `@samebase/alchemy-github`. Stages `demo` and `ci` are deployed.
+CURRENT: the spike runs on the packed `@samebase/alchemy-kit`. Stages `demo` and `ci` are deployed.
+
+# Moved onto @samebase/alchemy-kit (2026-11-17)
+
+- The package `@samebase/alchemy-github` is renamed to `@samebase/alchemy-kit`, entry
+  `@samebase/alchemy-kit/github-state`. The build also has four fixes from a review of the store.
+- The tarball `vendor/samebase-alchemy-kit-0.1.0.tgz` was packed from `packages/alchemy-kit` of
+  samebase/samebase at commit 883399762 (pull request 1998). It replaces the old tarball.
+- Laptop, stage `demo`, `SPIKE_NOTE=second`: `Plan: no changes`, `Done: 0 succeeded (1.9s)`. The new
+  build opens the state that the old build wrote.
+- Actions, stage `ci`:
+  [run 44138476533](https://github.com/samebase/cloudflare-state-test/actions/runs/44138476533),
+  green, `Plan: no changes`.
 
 # Moved onto @samebase/alchemy-github (2026-11-17)
 
