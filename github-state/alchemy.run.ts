@@ -1,4 +1,4 @@
-// The spike stack of `@samebase/alchemy-github`: harmless resources whose state goes to the branch
+// The spike stack of `@samebase/alchemy-kit/github-state`: harmless resources whose state goes to the branch
 // `alchemy-state-store` of this repository, secrets sealed with the key ALCHEMY_GITHUB_STATE_KEY.
 //
 // - `GitHub.Label` `spike-<stage>`: a real resource, managed with the run's GitHub token.
@@ -7,7 +7,7 @@
 //   so the state holds a sealed input prop too.
 // The stage `scale` has 40 Random resources and nothing else.
 import * as GitHub from "@alchemy.run/github";
-import * as GitHubState from "@samebase/alchemy-github";
+import * as GitHubState from "@samebase/alchemy-kit/github-state";
 import * as Alchemy from "alchemy";
 import * as Provider from "alchemy/Provider";
 import { Resource } from "alchemy/Resource";

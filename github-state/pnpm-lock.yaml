@@ -14,9 +14,9 @@ importers:
       '@effect/platform-node':
         specifier: ^4.1.4
         version: 4.1.4(effect@4.1.4)(redis@6.3.1)
-      '@samebase/alchemy-github':
-        specifier: file:./vendor/samebase-alchemy-github-0.1.0.tgz
-        version: file:vendor/samebase-alchemy-github-0.1.0.tgz(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.4(effect@4.1.4)(redis@6.3.1))(effect@4.1.4)(ws@8.23.0))(effect@4.1.4)
+      '@samebase/alchemy-kit':
+        specifier: file:./vendor/samebase-alchemy-kit-0.1.0.tgz
+        version: file:vendor/samebase-alchemy-kit-0.1.0.tgz(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.4(effect@4.1.4)(redis@6.3.1))(effect@4.1.4)(ws@8.23.0))(effect@4.1.4)
       '@types/node':
         specifier: ^26.6.6
         version: 26.6.6
@@ -214,8 +214,8 @@ packages:
   '@rolldown/pluginutils@1.1.1':
     resolution: {integrity: sha512-glFIJDvLNDtJhT9qrMFWLPbvS+skxgt4L0K8Ei2YtnhPysAJnsI7nyxSJxKj4ADeKX0OLjC4ntRkwpLOoS3rwA==}
 
-  '@samebase/alchemy-github@file:vendor/samebase-alchemy-github-0.1.0.tgz':
-    resolution: {integrity: sha512-UwrhzTrg53rVk1GgM5Uxb30Dx7xFrTyj4yPpNyfAa3M8qusb3uDTr8pl2aTFFocg7/vIcRd/y/hrTwXM2p7Qkg==, tarball: file:vendor/samebase-alchemy-github-0.1.0.tgz}
+  '@samebase/alchemy-kit@file:vendor/samebase-alchemy-kit-0.1.0.tgz':
+    resolution: {integrity: sha512-eQZQCAWxZfYl5ckDoShSNZ7/ejqorNhHICS1PY95tD8kosXNXm4t/Ykq0XpMaWIUJ5l1o7BfSzbzkkxwZyFAIw==, tarball: file:vendor/samebase-alchemy-kit-0.1.0.tgz}
     version: 0.1.0
     engines: {node: '>=22'}
     peerDependencies:
@@ -563,7 +563,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.1.1': {}
 
-  '@samebase/alchemy-github@file:vendor/samebase-alchemy-github-0.1.0.tgz(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.4(effect@4.1.4)(redis@6.3.1))(effect@4.1.4)(ws@8.23.0))(effect@4.1.4)':
+  '@samebase/alchemy-kit@file:vendor/samebase-alchemy-kit-0.1.0.tgz(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.4(effect@4.1.4)(redis@6.3.1))(effect@4.1.4)(ws@8.23.0))(effect@4.1.4)':
     dependencies:
       alchemy: 2.0.0-beta.85(@effect/platform-node@4.1.4(effect@4.1.4)(redis@6.3.1))(effect@4.1.4)(ws@8.23.0)
       effect: 4.1.4
