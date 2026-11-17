@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "IdentityHubClient",
   "logicalId": "IdentityHubClient",
   "instanceId": "54b809a88b306b1521d4c30030aa8868",
@@ -18,8 +18,39 @@
     "deploymentType": "production",
     "softwareVersion": "d05a099517b948dd48329195f8553945ad3b3ccd"
   },
-  "providerVersion": 0,
+  "attr": {
+    "status": "on",
+    "issuer": "https://id.samebase.com",
+    "clientId": "cl_OEJ-WttL7G-eppzkFlDEgw",
+    "clientSecret": {
+      "__redacted__": {
+        "__sealed__": "v1.EcH1oQy1vcIZ8B1F.XMToVsuOrhfalQ3XFzDFnkWsjm-c4Rg7_gA2Zqg489scZzO7xCzd3KZjK59LpNgKncpUVAJhacipphMNLQ"
+      }
+    },
+    "registrationAccessToken": {
+      "__redacted__": {
+        "__sealed__": "v1.u9QeOzZTFALR_-j-.r-Iz2drhs863AgwpV9vNJoA8LfaiMDmN26IJEAjN85ZJnP1cvJI6k3UqjSoSIr8LAyHZJYdqpjYZwVl70w"
+      }
+    },
+    "registrationClientUri": "https://id.samebase.com/register/cl_OEJ-WttL7G-eppzkFlDEgw",
+    "deploymentType": "production",
+    "app": "app",
+    "redirectUris": [
+      "https://elated-clam-974.convex.site/auth/hub/callback"
+    ],
+    "connectors": [
+      "github",
+      "google"
+    ],
+    "initialAccessToken": {
+      "__redacted__": {
+        "__sealed__": "v1.xIOQJFO5WukTFGwT.fJaSub-CdlZj3QTVZXklbECrPujLeZpfmGOU6acO5IBXPEImB_IWywtOjCHou2S8YsnXrqK9vFvdrc8bvQ"
+      }
+    },
+    "repository": "1455706513"
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "Site"
   ],
