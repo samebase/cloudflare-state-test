@@ -6,6 +6,13 @@ patchedDependencies:
   # allowedRedirectOrigins allow every port, which convex/auth.ts needs for the dev server. Remove
   # each when Convex Auth ships it.
   "@convex-dev/auth@2.0.0-beta.0": patches/@convex-dev__auth@2.0.0-beta.0.patch
+audit:
+  ignore:
+    # TODO(2026-11-17): Remove once picomatch publishes a fix. No patched release exists yet (latest
+    # is 4.0.7). The flaw needs a crafted glob pattern. picomatch only reaches build tooling
+    # (tinyglobby, fdir, the TanStack Start plugin), which matches patterns from this repository's
+    # own code and config.
+    - GHSA-fc5q-39xc-vjpf
 overrides:
   # Version floors from samebase/base's supply-chain checks.
   "@hono/node-server": 2.1.5
