@@ -3,13 +3,13 @@
   "fqn": "Note",
   "logicalId": "Note",
   "instanceId": "4f87727693dab8297889d7c99960d2ef",
-  "downstream": [],
+  "resourceType": "Spike.Note",
   "props": {
     "text": "first"
   },
   "providerVersion": 0,
-  "resourceType": "Spike.Note",
   "bindings": [],
+  "downstream": [],
   "removalPolicy": "destroy",
   "propsIncomplete": true
 }

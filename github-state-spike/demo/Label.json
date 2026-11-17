@@ -3,7 +3,7 @@
   "fqn": "Label",
   "logicalId": "Label",
   "instanceId": "8b5b69656b216939a9c717328c70916b",
-  "downstream": [],
+  "resourceType": "GitHub.Label",
   "props": {
     "owner": "samebase",
     "repository": "cloudflare-state-test",
@@ -12,7 +12,7 @@
     "description": "GitHub state store spike, stage demo"
   },
   "providerVersion": 0,
-  "resourceType": "GitHub.Label",
   "bindings": [],
+  "downstream": [],
   "removalPolicy": "destroy"
 }
