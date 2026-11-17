@@ -15,8 +15,9 @@
 // uploads the site, and pushes the functions.
 //
 // The stack is named after the repository, `owner/name`, and its Convex project after `name`. The
-// state of every stage is in the `alchemy-state-store` project of the team, which Convex.state()
-// creates on the first run. Every run needs the team token CONVEX_ACCESS_TOKEN, or a Convex CLI
+// state of every stage is on the branch `alchemy-state-store` of this repository, which
+// GitHubState.state() creates on the first run. It writes with GITHUB_TOKEN and seals each secret
+// with the key ALCHEMY_GITHUB_STATE_KEY. Every run needs the team token CONVEX_ACCESS_TOKEN, or a Convex CLI
 // login (`npx convex login`) on a development machine; it mints the deploy keys itself. The token
 // names its team; with the Convex CLI login, the team is the team of the deployment that .env.local
 // selects.
@@ -41,9 +42,9 @@
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { parseEnv } from "node:util";
-import * as Cloudflare from "@alchemy.run/cloudflare";
 import * as Convex from "@samebase/alchemy-convex";
 import * as IdentityHub from "@samebase/alchemy-convex/identity-hub";
+import * as GitHubState from "@samebase/alchemy-kit/github-state";
 import * as Alchemy from "alchemy";
 import { adopt } from "alchemy/AdoptPolicy";
 import * as Output from "alchemy/Output";
@@ -93,7 +94,7 @@ export default Alchemy.Stack(
   repository,
   {
     providers: Convex.providers(),
-    state: Convex.withRunRecord(Cloudflare.state()),
+    state: Convex.withRunRecord(GitHubState.state()),
   },
   Effect.gen(function* () {
     const { stage } = yield* Alchemy.Stack;
