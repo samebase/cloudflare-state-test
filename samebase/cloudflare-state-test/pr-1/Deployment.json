@@ -1,0 +1,109 @@
+{
+  "status": "updating",
+  "fqn": "Deployment",
+  "logicalId": "Deployment",
+  "instanceId": "c48c1ebe222bb9a49d35db59c651aa69",
+  "resourceType": "Convex.Deployment",
+  "props": {
+    "project": {
+      "projectId": 3426180,
+      "slug": "cloudflare-state-test",
+      "name": "cloudflare-state-test",
+      "teamId": 38516,
+      "prodDeploymentName": "elated-clam-974",
+      "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
+    },
+    "type": "preview",
+    "name": "pr-1",
+    "source": {
+      "path": "./convex",
+      "command": [
+        "node",
+        "--run",
+        "deploy"
+      ],
+      "include": [
+        "src/**",
+        "public/**",
+        "scripts/**",
+        "vite.config.ts",
+        "tsconfig*.json"
+      ]
+    },
+    "env": {
+      "SAMEBASE_REPOSITORY_ID": "1455706513"
+    },
+    "rootDir": "."
+  },
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "zany-hound-683",
+    "reference": "preview/pr-1",
+    "previewName": "pr-1",
+    "url": "https://zany-hound-683.convex.cloud",
+    "siteUrl": "https://zany-hound-683.convex.site",
+    "envNames": []
+  },
+  "providerVersion": 0,
+  "bindings": [],
+  "downstream": [
+    "IdentityHubClient"
+  ],
+  "old": {
+    "status": "created",
+    "fqn": "Deployment",
+    "logicalId": "Deployment",
+    "instanceId": "c48c1ebe222bb9a49d35db59c651aa69",
+    "resourceType": "Convex.Deployment",
+    "props": {
+      "project": {
+        "projectId": 3426180,
+        "slug": "cloudflare-state-test",
+        "name": "cloudflare-state-test",
+        "teamId": 38516,
+        "prodDeploymentName": "elated-clam-974",
+        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
+      },
+      "type": "preview",
+      "name": "pr-1",
+      "source": {
+        "path": "./convex",
+        "command": [
+          "node",
+          "--run",
+          "deploy"
+        ],
+        "include": [
+          "src/**",
+          "public/**",
+          "scripts/**",
+          "vite.config.ts",
+          "tsconfig*.json"
+        ]
+      },
+      "env": {
+        "SAMEBASE_REPOSITORY_ID": "1455706513"
+      },
+      "rootDir": "."
+    },
+    "attr": {
+      "projectId": 3426180,
+      "type": "preview",
+      "name": "zany-hound-683",
+      "reference": "preview/pr-1",
+      "previewName": "pr-1",
+      "url": "https://zany-hound-683.convex.cloud",
+      "siteUrl": "https://zany-hound-683.convex.site",
+      "envNames": []
+    },
+    "providerVersion": 0,
+    "bindings": [],
+    "downstream": [
+      "IdentityHubClient"
+    ],
+    "removalPolicy": "destroy"
+  },
+  "adopting": true,
+  "removalPolicy": "destroy"
+}
