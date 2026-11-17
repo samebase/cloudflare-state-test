@@ -3,15 +3,15 @@
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "93802826262d629283ba8fa155e36dce",
-  "downstream": [],
+  "resourceType": "Convex.Deployment",
   "props": {
     "type": "prod",
     "env": {},
     "rootDir": "."
   },
   "providerVersion": 0,
-  "resourceType": "Convex.Deployment",
   "bindings": [],
+  "downstream": [],
   "removalPolicy": "retain",
   "propsIncomplete": true
 }
