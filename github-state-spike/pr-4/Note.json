@@ -1,15 +1,22 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Note",
   "logicalId": "Note",
   "instanceId": "95a624f95da2b6fd0e1fdd2483786b23",
   "resourceType": "Spike.Note",
   "props": {
+    "secret": {
+      "__redacted__": {
+        "__sealed__": "v1.6oFRaI6jA5iGJNnt.fPITWwsBbJz_KNPHw12BqPobzVVYbMTFISJkTUFW4WJmHuc2TBsXsX5edbKULXja3dE"
+      }
+    },
     "text": "first"
   },
-  "providerVersion": 0,
+  "attr": {
+    "length": 5
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
-  "removalPolicy": "destroy",
-  "propsIncomplete": true
+  "removalPolicy": "destroy"
 }
