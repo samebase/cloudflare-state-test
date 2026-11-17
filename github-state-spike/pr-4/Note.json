@@ -1,0 +1,15 @@
+{
+  "status": "creating",
+  "fqn": "Note",
+  "logicalId": "Note",
+  "instanceId": "95a624f95da2b6fd0e1fdd2483786b23",
+  "downstream": [],
+  "props": {
+    "text": "first"
+  },
+  "providerVersion": 0,
+  "resourceType": "Spike.Note",
+  "bindings": [],
+  "removalPolicy": "destroy",
+  "propsIncomplete": true
+}

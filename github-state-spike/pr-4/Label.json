@@ -1,0 +1,18 @@
+{
+  "status": "creating",
+  "fqn": "Label",
+  "logicalId": "Label",
+  "instanceId": "c384fbd35ea4da25230db48fb7a34cc6",
+  "downstream": [],
+  "props": {
+    "owner": "samebase",
+    "repository": "cloudflare-state-test",
+    "name": "spike-pr-4",
+    "color": "c5def5",
+    "description": "GitHub state store spike, stage pr-4"
+  },
+  "providerVersion": 0,
+  "resourceType": "GitHub.Label",
+  "bindings": [],
+  "removalPolicy": "destroy"
+}
