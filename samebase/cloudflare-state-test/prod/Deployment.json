@@ -34,6 +34,15 @@
     },
     "rootDir": "."
   },
+  "attr": {
+    "projectId": 3426180,
+    "type": "prod",
+    "name": "elated-clam-974",
+    "reference": "production",
+    "url": "https://elated-clam-974.convex.cloud",
+    "siteUrl": "https://elated-clam-974.convex.site",
+    "envNames": []
+  },
   "providerVersion": 0,
   "bindings": [],
   "downstream": [
