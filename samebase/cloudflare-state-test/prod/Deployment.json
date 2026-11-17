@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "54db56d449ba3346ef82179abbb36e60",
@@ -41,10 +41,13 @@
     "reference": "production",
     "url": "https://elated-clam-974.convex.cloud",
     "siteUrl": "https://elated-clam-974.convex.site",
-    "envNames": []
+    "hash": "18ad29cc18376450841d76784a2a17ce0c70ff8023d17a000ff19741a63eb222",
+    "envNames": [
+      "SAMEBASE_REPOSITORY_ID"
+    ]
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "IdentityHubClient"
   ],
