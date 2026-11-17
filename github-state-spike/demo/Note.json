@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "Note",
   "logicalId": "Note",
   "instanceId": "4f87727693dab8297889d7c99960d2ef",
@@ -7,38 +7,16 @@
   "props": {
     "secret": {
       "__redacted__": {
-        "__sealed__": "v1.NMwFIOqHjcvzvBnb.DhCgw7sg-GUoZi_meTNna0N_7ft8weashn5W0qtUytUeg_J1Sxoyj_B4VeN7JxYirQ0"
+        "__sealed__": "v1.PCYq1y0ZtbB1MBRb.7BBULCuCfvsaM_XhytXRgMSeQOoiu-mTLyVeVOOdK6vyL1iqOlCQfUfxP20f8-hnmfQ"
       }
     },
     "text": "second"
   },
   "attr": {
-    "length": 5
+    "length": 6
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
-  "old": {
-    "status": "created",
-    "fqn": "Note",
-    "logicalId": "Note",
-    "instanceId": "4f87727693dab8297889d7c99960d2ef",
-    "resourceType": "Spike.Note",
-    "props": {
-      "secret": {
-        "__redacted__": {
-          "__sealed__": "v1.qi-88SKlNOstSimH.PTGq2hJxd5x_b7AqR6-N63E7RUqBq1kmzkAlsktuoCjjgcp6l7zLyEX6-OFvHlarxe4"
-        }
-      },
-      "text": "first"
-    },
-    "attr": {
-      "length": 5
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [],
-    "removalPolicy": "destroy"
-  },
   "removalPolicy": "destroy"
 }
