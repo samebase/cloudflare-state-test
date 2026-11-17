@@ -20,11 +20,21 @@
       "IDENTITY_HUB_CLIENT_ID": "cl_frqKNFvl3OZNKp-dnztsOQ",
       "IDENTITY_HUB_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.btzjF0MLhk8ie5k7.NJkrR6Cv61i_wYo58Px4is--nE7qKl2tz5LZVhzcf60pdObbu_56AHeEe5heAkqRjdbE_gZTfc6ACHS1oA"
+          "__sealed__": "v1.4OS3DCfhgAen5kjI.0Ra2vbcDvDUGTQ_f0wl-KDMJ8GR7dPEvArkHw80IxdxF_ydaFWC4UoVpVP-RW2ZvBr2y2lm102UMHjmCGQ"
         }
       }
     },
     "rootDir": "."
+  },
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "zany-hound-683",
+    "reference": "preview/pr-1",
+    "previewName": "pr-1",
+    "url": "https://zany-hound-683.convex.cloud",
+    "siteUrl": "https://zany-hound-683.convex.site",
+    "envNames": []
   },
   "providerVersion": 0,
   "bindings": [],
