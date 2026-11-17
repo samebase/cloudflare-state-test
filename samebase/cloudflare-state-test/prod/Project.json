@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "Project",
   "logicalId": "Project",
   "instanceId": "fe25fb152db92f48a6ea6ea9a4d0a612",
@@ -15,37 +15,11 @@
     "prodDeploymentName": "elated-clam-974",
     "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "Deployment",
     "Site"
   ],
-  "old": {
-    "status": "created",
-    "fqn": "Project",
-    "logicalId": "Project",
-    "instanceId": "fe25fb152db92f48a6ea6ea9a4d0a612",
-    "resourceType": "Convex.Project",
-    "props": {
-      "name": "cloudflare-state-test"
-    },
-    "attr": {
-      "projectId": 3426180,
-      "slug": "cloudflare-state-test",
-      "name": "cloudflare-state-test",
-      "teamId": 38516,
-      "prodDeploymentName": "elated-clam-974",
-      "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
-    },
-    "providerVersion": 0,
-    "bindings": [],
-    "downstream": [
-      "Deployment",
-      "Site"
-    ],
-    "removalPolicy": "destroy"
-  },
-  "adopting": true,
   "removalPolicy": "destroy"
 }
