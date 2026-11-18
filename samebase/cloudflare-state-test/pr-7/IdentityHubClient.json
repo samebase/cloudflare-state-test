@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "IdentityHubClient",
   "logicalId": "IdentityHubClient",
   "instanceId": "a5553b233ba6d7ab705fb4bab3ee128c",
@@ -18,8 +18,39 @@
     "deploymentType": "preview",
     "softwareVersion": "80ed5e8ab138caf88380d71cfc36d7c551f7e9fc"
   },
-  "providerVersion": 0,
+  "attr": {
+    "status": "on",
+    "issuer": "https://id.samebase.com",
+    "clientId": "cl_SeNCR1WhLuVZ3tuMj-wQDw",
+    "clientSecret": {
+      "__redacted__": {
+        "__sealed__": "v1.5PLa5b_64jKjP4iy.PeM6F8CxQJ1yLirYxgRf7qiC_4suYObw9Ds5WAdxARhjf3A8U7myJlNEf0Pfkpd2rwWE333WuGAvOef3RQ"
+      }
+    },
+    "registrationAccessToken": {
+      "__redacted__": {
+        "__sealed__": "v1.iyK08luht5OUsuN3.RXIlOch-Fr667IskBKfffLOpMoYhS7WdwL-BrDVxzIV1oBJ50Gte_dwB9RwK0nWoDhmwvHfywHhCd5jPbA"
+      }
+    },
+    "registrationClientUri": "https://id.samebase.com/register/cl_SeNCR1WhLuVZ3tuMj-wQDw",
+    "deploymentType": "preview",
+    "app": "app",
+    "redirectUris": [
+      "https://youthful-platypus-457.convex.site/auth/hub/callback"
+    ],
+    "connectors": [
+      "github",
+      "google"
+    ],
+    "initialAccessToken": {
+      "__redacted__": {
+        "__sealed__": "v1.l_rD-fPBChkmEK8q.jz93E5GtPf0HlCrA1d8v2YUd"
+      }
+    },
+    "repository": ""
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "Site"
   ],
