@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "IdentityHubClient",
   "logicalId": "IdentityHubClient",
   "instanceId": "54b809a88b306b1521d4c30030aa8868",
@@ -24,12 +24,12 @@
     "clientId": "cl_OEJ-WttL7G-eppzkFlDEgw",
     "clientSecret": {
       "__redacted__": {
-        "__sealed__": "v1.yAONJISh8VceUOjZ.BkyvTomko1MlFdIma0Dq4ZVopRzrDYgDArjz8w2WDXGRQDMmBg_SomHK-6y226uZfR6y2WAol1bBjm3QMg"
+        "__sealed__": "v1.a6vFF3ba4gR-KRu2.SJHMPuAg9D9Ntu-chMEHMD2NqliitIEj11OzebY844hi0wbuBG253UDnS0rGTXzcn7dOj0vST1etIpcWJw"
       }
     },
     "registrationAccessToken": {
       "__redacted__": {
-        "__sealed__": "v1.RU0tQPMbe05yULwv.0TYLL0fjYShdC7NNEHUGEOTY8Ngex9c4cMUyAdlBo9j3VzKdNtNeX8S_7ASt2swt_OKFCEHnqxgIMo26vA"
+        "__sealed__": "v1.Ahl6bStU-eK8Z_Ia.woDtBj3qvynfbHELFq7udkIfNm6BbdinlabEDvIdLeTfESX4hRcog13igjZx5RpAHQ4cc1fxeC8xPv0AHw"
       }
     },
     "registrationClientUri": "https://id.samebase.com/register/cl_OEJ-WttL7G-eppzkFlDEgw",
@@ -44,73 +44,15 @@
     ],
     "initialAccessToken": {
       "__redacted__": {
-        "__sealed__": "v1.RmG1cYJ-hgC73VfJ.trMZZWws1PpWg6Mq--DRwimf0eomXJ9CD_1vA8JgpOUyyvJ7qr75Ke7PmvS5wpL_LyxSKZeOpwAA0mywnw"
+        "__sealed__": "v1.Oli0dMi2HI2gcBPL.pKjK7xRkaeHLuwzq_G_81AD1mi_X4K4YEpjK-RsjANwbu-kDzg_YAMZv8dg1gAMAy84YZMVhmPgqTEaSSw"
       }
     },
     "repository": "1455706513"
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "Site"
   ],
-  "old": {
-    "status": "updated",
-    "fqn": "IdentityHubClient",
-    "logicalId": "IdentityHubClient",
-    "instanceId": "54b809a88b306b1521d4c30030aa8868",
-    "resourceType": "IdentityHub.Client",
-    "props": {
-      "hub": {
-        "issuer": "https://id.samebase.com"
-      },
-      "connectors": [
-        "google",
-        "github"
-      ],
-      "redirectUris": [
-        "https://elated-clam-974.convex.site/auth/hub/callback"
-      ],
-      "deploymentType": "production",
-      "softwareVersion": "8ddb07096448b6b1a6268c9537686559a2c409ec"
-    },
-    "attr": {
-      "status": "on",
-      "issuer": "https://id.samebase.com",
-      "clientId": "cl_OEJ-WttL7G-eppzkFlDEgw",
-      "clientSecret": {
-        "__redacted__": {
-          "__sealed__": "v1.BDs639G_MeLPWO3c.RX89n335GAavHTKt_4zNC9anOOlRMu10JjcPVH4IqpaGZBbSmEXintqudHO5hkYHt2xjoif0X8edd9GRFg"
-        }
-      },
-      "registrationAccessToken": {
-        "__redacted__": {
-          "__sealed__": "v1.atKQbz4w113-_Re-.RRmINj7i0inbbICcnCOFzS1aA43Z8tLQ4J80Hgs0VVJa5uckheKZT_ojHIde0x73ntTnKIBGmpbWOv0BCQ"
-        }
-      },
-      "registrationClientUri": "https://id.samebase.com/register/cl_OEJ-WttL7G-eppzkFlDEgw",
-      "deploymentType": "production",
-      "app": "app",
-      "redirectUris": [
-        "https://elated-clam-974.convex.site/auth/hub/callback"
-      ],
-      "connectors": [
-        "github",
-        "google"
-      ],
-      "initialAccessToken": {
-        "__redacted__": {
-          "__sealed__": "v1.xhIVcLQz1T2DZu8B.8g3NuQ_yiMzt1WTsetxYvL1vA_se-hkZE3gi_JcAJPlfQaQ4fgGoVcgprI7FHeRwkFCaEiEeA4GOYw6_vg"
-        }
-      },
-      "repository": "1455706513"
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [
-      "Site"
-    ],
-    "removalPolicy": "destroy"
-  },
   "removalPolicy": "destroy"
 }
