@@ -20,11 +20,21 @@
       "IDENTITY_HUB_CLIENT_ID": "cl_SeNCR1WhLuVZ3tuMj-wQDw",
       "IDENTITY_HUB_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.UE6fziucARn7jEZv.jwtJkob8XDllwJA6CZ1TXqSPCmlwsE9Iovi4Pq5zkI5cssCT270Pn7R32HSakqieaL1DA0R71gvYoq5NzA"
+          "__sealed__": "v1.a6gVfp5QYQ7a6C4E.VIGqmyKWegt0zYTBXrkeVWATtdX8t2X_uegnLmKLUKi9KkM85919jURb8ST-1F0LfHya3GfJWCLSgSQXAw"
         }
       }
     },
     "rootDir": "."
+  },
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "youthful-platypus-457",
+    "reference": "preview/pr-7",
+    "previewName": "pr-7",
+    "url": "https://youthful-platypus-457.convex.cloud",
+    "siteUrl": "https://youthful-platypus-457.convex.site",
+    "envNames": []
   },
   "providerVersion": 0,
   "bindings": [],
