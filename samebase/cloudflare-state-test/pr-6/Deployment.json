@@ -3,9 +3,7 @@
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "df758f15859175613096c7ab00d80357",
-  "downstream": [
-    "IdentityHubClient"
-  ],
+  "resourceType": "Convex.Deployment",
   "props": {
     "project": {
       "projectId": 3426180,
@@ -38,7 +36,9 @@
     "rootDir": "."
   },
   "providerVersion": 0,
-  "resourceType": "Convex.Deployment",
   "bindings": [],
+  "downstream": [
+    "IdentityHubClient"
+  ],
   "removalPolicy": "destroy"
 }
