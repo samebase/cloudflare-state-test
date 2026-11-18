@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "df9ce7018ee015d723f66fea8c17028a",
@@ -20,7 +20,7 @@
       "IDENTITY_HUB_CLIENT_ID": "cl_SeNCR1WhLuVZ3tuMj-wQDw",
       "IDENTITY_HUB_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.a6gVfp5QYQ7a6C4E.VIGqmyKWegt0zYTBXrkeVWATtdX8t2X_uegnLmKLUKi9KkM85919jURb8ST-1F0LfHya3GfJWCLSgSQXAw"
+          "__sealed__": "v1.FVaKgS5_WPdQMMwJ.0T7ysg1anIjRTUYb-dydRcAdDenPS-vTVlfaSCn852DTjZDhs6Ue44AASxTKlGIaY0fv2ElhxeJMZcnp6w"
         }
       }
     },
@@ -34,10 +34,15 @@
     "previewName": "pr-7",
     "url": "https://youthful-platypus-457.convex.cloud",
     "siteUrl": "https://youthful-platypus-457.convex.site",
-    "envNames": []
+    "hash": "3ca92911f73717ad4365acb6e08d31a39d42e6f4ecb865d6461aa3136bd3054b",
+    "envNames": [
+      "IDENTITY_HUB_CLIENT_ID",
+      "IDENTITY_HUB_CLIENT_SECRET",
+      "IDENTITY_HUB_ISSUER"
+    ]
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
   "removalPolicy": "destroy"
 }
