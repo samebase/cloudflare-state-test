@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "IdentityHubClient",
   "logicalId": "IdentityHubClient",
   "instanceId": "c4fc9365afe36cd67c946eadf6055885",
@@ -24,12 +24,12 @@
     "clientId": "cl_frqKNFvl3OZNKp-dnztsOQ",
     "clientSecret": {
       "__redacted__": {
-        "__sealed__": "v1.N-5yCwjBODLqN_Ui.TUgz6NdOtijGamRYwr9Yjbz1QM9F4eX8W8VjY8UIl-PU6gL0SVCxJRMvSsxlyMOaLA5Iw-9nFG6ZHXwoRQ"
+        "__sealed__": "v1.OwHDFF2Kn2T0BXti.Y1QlF9LskptTtep6X8R2xPQ4TXls8nkd6qLi_5g728Z0JCGDm8XBKm2LgWLFH9dCFMw0-kITDkyuSufiuQ"
       }
     },
     "registrationAccessToken": {
       "__redacted__": {
-        "__sealed__": "v1.r7V6YSlNSWdh4BEJ.DfOuWq4O6OnEwox-tio-7YzVLxqe81WItG3PMfRAxVzNNBX5cFl0NhF9yZmkfRDlaC9uevkbIpjykhgDmw"
+        "__sealed__": "v1.-SlQVVsohcuf9hLV.jlwRFEgOj7Z99VOPOn3IYNndxJr1Qs7MFSar2_Bf9x6FwOonGAWYEZ9KL6DYoNxAma5T4yKOuzrOYJScNw"
       }
     },
     "registrationClientUri": "https://id.samebase.com/register/cl_frqKNFvl3OZNKp-dnztsOQ",
@@ -44,73 +44,15 @@
     ],
     "initialAccessToken": {
       "__redacted__": {
-        "__sealed__": "v1.Cjg1mMhbjEIzVuau.HF-cRqnj7-AqtzvOVZYC_VIu"
+        "__sealed__": "v1.KcNQoRHOEs_zNEp9.bvoENjENpn-wLukcs5l0Fd4e"
       }
     },
     "repository": ""
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "Site"
   ],
-  "old": {
-    "status": "updated",
-    "fqn": "IdentityHubClient",
-    "logicalId": "IdentityHubClient",
-    "instanceId": "c4fc9365afe36cd67c946eadf6055885",
-    "resourceType": "IdentityHub.Client",
-    "props": {
-      "hub": {
-        "issuer": "https://id.samebase.com"
-      },
-      "connectors": [
-        "google",
-        "github"
-      ],
-      "redirectUris": [
-        "https://zany-hound-683.convex.site/auth/hub/callback"
-      ],
-      "deploymentType": "preview",
-      "softwareVersion": "b717f531e1a9ab316095533ef974a16b865571fc"
-    },
-    "attr": {
-      "status": "on",
-      "issuer": "https://id.samebase.com",
-      "clientId": "cl_frqKNFvl3OZNKp-dnztsOQ",
-      "clientSecret": {
-        "__redacted__": {
-          "__sealed__": "v1.DlcPem1b6_505-sI.DEw0KuVfYYp1x8qmW74Fx7gJsaK5Np7xO70AJBi5YNKfroAPWm6k1qOwKPhIMDHi-q6lKRrgnkUV7o5G1g"
-        }
-      },
-      "registrationAccessToken": {
-        "__redacted__": {
-          "__sealed__": "v1.9cfb9m_ZelEER4dd.AoDKUxWIudTJ3rkOUERvGf-OJGdG_ktN6DQ3jOx6cPdH4hxgyU_8TW5dRZTkb8X8FWQIfhZxXuAo2w9otg"
-        }
-      },
-      "registrationClientUri": "https://id.samebase.com/register/cl_frqKNFvl3OZNKp-dnztsOQ",
-      "deploymentType": "preview",
-      "app": "app",
-      "redirectUris": [
-        "https://zany-hound-683.convex.site/auth/hub/callback"
-      ],
-      "connectors": [
-        "github",
-        "google"
-      ],
-      "initialAccessToken": {
-        "__redacted__": {
-          "__sealed__": "v1.vCkgwqPDqie6Dyv8.aKxRbyUwS4wRcnbYaiOAgrm0"
-        }
-      },
-      "repository": ""
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [
-      "Site"
-    ],
-    "removalPolicy": "destroy"
-  },
   "removalPolicy": "destroy"
 }
