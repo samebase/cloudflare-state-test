@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "fd2b7fb10826f689c71d87354e038095",
@@ -43,72 +43,15 @@
     "previewName": "pr-4",
     "url": "https://hip-donkey-721.convex.cloud",
     "siteUrl": "https://hip-donkey-721.convex.site",
-    "hash": "bc1720e47a958f1f8211ab9c81174ea7ba9265dc5bbeddad8feb486520dba4a5",
+    "hash": "4732b53d8534703f5edeb584023b996f2f88aa5469210656b2b4fa88bcbeba12",
     "envNames": [
       "SAMEBASE_REPOSITORY_ID"
     ]
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "IdentityHubClient"
   ],
-  "old": {
-    "status": "updated",
-    "fqn": "Deployment",
-    "logicalId": "Deployment",
-    "instanceId": "fd2b7fb10826f689c71d87354e038095",
-    "resourceType": "Convex.Deployment",
-    "props": {
-      "project": {
-        "projectId": 3426180,
-        "slug": "cloudflare-state-test",
-        "name": "cloudflare-state-test",
-        "teamId": 38516,
-        "prodDeploymentName": "elated-clam-974",
-        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
-      },
-      "type": "preview",
-      "name": "pr-4",
-      "source": {
-        "path": "./convex",
-        "command": [
-          "node",
-          "--run",
-          "deploy"
-        ],
-        "include": [
-          "src/**",
-          "public/**",
-          "scripts/**",
-          "vite.config.ts",
-          "tsconfig*.json"
-        ]
-      },
-      "env": {
-        "SAMEBASE_REPOSITORY_ID": "1455706513"
-      },
-      "rootDir": "."
-    },
-    "attr": {
-      "projectId": 3426180,
-      "type": "preview",
-      "name": "hip-donkey-721",
-      "reference": "preview/pr-4",
-      "previewName": "pr-4",
-      "url": "https://hip-donkey-721.convex.cloud",
-      "siteUrl": "https://hip-donkey-721.convex.site",
-      "hash": "bc1720e47a958f1f8211ab9c81174ea7ba9265dc5bbeddad8feb486520dba4a5",
-      "envNames": [
-        "SAMEBASE_REPOSITORY_ID"
-      ]
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [
-      "IdentityHubClient"
-    ],
-    "removalPolicy": "destroy"
-  },
   "removalPolicy": "destroy"
 }
