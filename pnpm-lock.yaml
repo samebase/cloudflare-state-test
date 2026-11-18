@@ -296,8 +296,8 @@ importers:
         specifier: 0.40.0
         version: 0.40.0(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0))(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0))(@types/react@19.3.0)(@voidzero-dev/vite-plus-core@1.4.0(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.1))(effect@4.1.2)(ws@8.22.0))(convex@1.48.0(react@19.3.1))(effect@4.1.2)
       '@samebase/alchemy-kit':
-        specifier: file:vendor/samebase-alchemy-kit-0.2.2.tgz
-        version: file:vendor/samebase-alchemy-kit-0.2.2.tgz(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0))(@types/react@19.3.0)(@voidzero-dev/vite-plus-core@1.4.0(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.1))(effect@4.1.2)(ws@8.22.0))(effect@4.1.2)
+        specifier: 0.2.2
+        version: 0.2.2(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0))(@types/react@19.3.0)(@voidzero-dev/vite-plus-core@1.4.0(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.1))(effect@4.1.2)(ws@8.22.0))(effect@4.1.2)
       '@tanstack/router-plugin':
         specifier: 1.168.48
         version: 1.168.48(@tanstack/react-router@1.170.46(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(@voidzero-dev/vite-plus-core@1.4.0(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.1))(esbuild@0.27.0)(rolldown@1.2.13)
@@ -1964,9 +1964,8 @@ packages:
       convex: ^1.48.0
       effect: ^4.1.0
 
-  '@samebase/alchemy-kit@file:vendor/samebase-alchemy-kit-0.2.2.tgz':
-    resolution: {integrity: sha512-POgdP3NjNcQUyy9LII+xc6vKO2Ia1LzoT2gTB1ysV9g4WQtriZv/XVpJHhqxvcq/iU7zynzmXQnwC9KC8jt2Eg==, tarball: file:vendor/samebase-alchemy-kit-0.2.2.tgz}
-    version: 0.2.2
+  '@samebase/alchemy-kit@0.2.2':
+    resolution: {integrity: sha512-POgdP3NjNcQUyy9LII+xc6vKO2Ia1LzoT2gTB1ysV9g4WQtriZv/XVpJHhqxvcq/iU7zynzmXQnwC9KC8jt2Eg==}
     engines: {node: '>=22'}
     peerDependencies:
       alchemy: 2.0.0-beta.85
@@ -5761,7 +5760,7 @@ snapshots:
       convex: 1.48.0(react@19.3.1)
       effect: 4.1.2
 
-  '@samebase/alchemy-kit@file:vendor/samebase-alchemy-kit-0.2.2.tgz(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0))(@types/react@19.3.0)(@voidzero-dev/vite-plus-core@1.4.0(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.1))(effect@4.1.2)(ws@8.22.0))(effect@4.1.2)':
+  '@samebase/alchemy-kit@0.2.2(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0))(@types/react@19.3.0)(@voidzero-dev/vite-plus-core@1.4.0(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.1))(effect@4.1.2)(ws@8.22.0))(effect@4.1.2)':
     dependencies:
       alchemy: 2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0))(@types/react@19.3.0)(@voidzero-dev/vite-plus-core@1.4.0(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.1))(effect@4.1.2)(ws@8.22.0)
       effect: 4.1.2
