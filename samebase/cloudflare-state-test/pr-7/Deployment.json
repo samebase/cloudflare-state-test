@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "13307c9429a0dac2951d69ef661c49aa",
@@ -35,8 +35,21 @@
     },
     "rootDir": "."
   },
-  "providerVersion": 0,
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "youthful-platypus-457",
+    "reference": "preview/pr-7",
+    "previewName": "pr-7",
+    "url": "https://youthful-platypus-457.convex.cloud",
+    "siteUrl": "https://youthful-platypus-457.convex.site",
+    "hash": "450bd9437af9c82980b03b11ad5561469486430e1a60f49b1b13479f93e31960",
+    "envNames": [
+      "SAMEBASE_REPOSITORY_ID"
+    ]
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "IdentityHubClient"
   ],
