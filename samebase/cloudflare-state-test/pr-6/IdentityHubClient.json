@@ -13,7 +13,7 @@
       "github"
     ],
     "redirectUris": [
-      null
+      "https://sensible-okapi-321.convex.site/auth/hub/callback"
     ],
     "deploymentType": "preview",
     "softwareVersion": "3caec20f33f6189b26be8c0f93e1872184c12c57"
@@ -23,6 +23,5 @@
   "downstream": [
     "Site"
   ],
-  "removalPolicy": "destroy",
-  "propsIncomplete": true
+  "removalPolicy": "destroy"
 }
