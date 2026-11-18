@@ -15,12 +15,19 @@
     },
     "type": "preview",
     "name": "pr-6",
-    "env": {},
+    "env": {
+      "IDENTITY_HUB_ISSUER": "https://id.samebase.com",
+      "IDENTITY_HUB_CLIENT_ID": "cl_GTbbJs6jRN1CITTGb7v6DQ",
+      "IDENTITY_HUB_CLIENT_SECRET": {
+        "__redacted__": {
+          "__sealed__": "v1.YHZHzrSumFc7GgNb.T8N42j5kzuplRrtvKb_7YL0V401KrPvyJHmI13-j9uvE3gu7TiLFok7cc4htnqItNsQ91bjJGJEWq0X8MA"
+        }
+      }
+    },
     "rootDir": "."
   },
   "providerVersion": 0,
   "bindings": [],
   "downstream": [],
-  "removalPolicy": "destroy",
-  "propsIncomplete": true
+  "removalPolicy": "destroy"
 }
