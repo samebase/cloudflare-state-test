@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "df758f15859175613096c7ab00d80357",
@@ -35,8 +35,21 @@
     },
     "rootDir": "."
   },
-  "providerVersion": 0,
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "sensible-okapi-321",
+    "reference": "preview/pr-6",
+    "previewName": "pr-6",
+    "url": "https://sensible-okapi-321.convex.cloud",
+    "siteUrl": "https://sensible-okapi-321.convex.site",
+    "hash": "e2ae7d7192f5decdde4177e0a3aeaeb8a9b93e35520e85a2d285b2cb1aabbac5",
+    "envNames": [
+      "SAMEBASE_REPOSITORY_ID"
+    ]
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "IdentityHubClient"
   ],
