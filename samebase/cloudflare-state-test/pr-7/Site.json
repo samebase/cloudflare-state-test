@@ -3,7 +3,7 @@
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "df9ce7018ee015d723f66fea8c17028a",
-  "downstream": [],
+  "resourceType": "Convex.Deployment",
   "props": {
     "project": {
       "projectId": 3426180,
@@ -19,8 +19,8 @@
     "rootDir": "."
   },
   "providerVersion": 0,
-  "resourceType": "Convex.Deployment",
   "bindings": [],
+  "downstream": [],
   "removalPolicy": "destroy",
   "propsIncomplete": true
 }
