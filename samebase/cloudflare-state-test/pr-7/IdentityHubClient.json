@@ -13,7 +13,7 @@
       "github"
     ],
     "redirectUris": [
-      null
+      "https://youthful-platypus-457.convex.site/auth/hub/callback"
     ],
     "deploymentType": "preview",
     "softwareVersion": "80ed5e8ab138caf88380d71cfc36d7c551f7e9fc"
@@ -23,6 +23,5 @@
   "downstream": [
     "Site"
   ],
-  "removalPolicy": "destroy",
-  "propsIncomplete": true
+  "removalPolicy": "destroy"
 }
