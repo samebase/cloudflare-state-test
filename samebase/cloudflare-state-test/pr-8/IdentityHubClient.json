@@ -13,7 +13,7 @@
       "github"
     ],
     "redirectUris": [
-      null
+      "https://nautical-heron-915.convex.site/auth/hub/callback"
     ],
     "deploymentType": "preview",
     "softwareVersion": "2d9f1d5683e76f17ebcaf373c6725ab302760c4d"
@@ -23,6 +23,5 @@
   "downstream": [
     "Site"
   ],
-  "removalPolicy": "destroy",
-  "propsIncomplete": true
+  "removalPolicy": "destroy"
 }
