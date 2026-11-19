@@ -1,5 +1,5 @@
 {
-  "status": "updated",
+  "status": "updating",
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "93802826262d629283ba8fa155e36dce",
@@ -19,7 +19,7 @@
       "IDENTITY_HUB_CLIENT_ID": "cl_OEJ-WttL7G-eppzkFlDEgw",
       "IDENTITY_HUB_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.VeCyV1x4-vtPKNaT.zm7BQE-JCK9w_aBE9sNm2EuibH1az9S8E7B8uVvi00JHPLcYxD_3LBRTTwYqcqLV05-yz8PSuru8iC3dEg"
+          "__sealed__": "v1.qtE4VbASOQcB5Cpp.ITa2oLWqTCCd7j2XqafjtRKt_DgxX6X-Z856EMlguCVrHW3NyPEUeJadUSl1kIbRygBoBg2NQk9iMAp1uw"
         }
       }
     },
@@ -39,8 +39,54 @@
       "IDENTITY_HUB_ISSUER"
     ]
   },
-  "bindings": [],
   "providerVersion": 0,
+  "bindings": [],
   "downstream": [],
+  "old": {
+    "status": "updated",
+    "fqn": "Site",
+    "logicalId": "Site",
+    "instanceId": "93802826262d629283ba8fa155e36dce",
+    "resourceType": "Convex.Deployment",
+    "props": {
+      "project": {
+        "projectId": 3426180,
+        "slug": "cloudflare-state-test",
+        "name": "cloudflare-state-test",
+        "teamId": 38516,
+        "prodDeploymentName": "elated-clam-974",
+        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
+      },
+      "type": "prod",
+      "env": {
+        "IDENTITY_HUB_ISSUER": "https://id.samebase.com",
+        "IDENTITY_HUB_CLIENT_ID": "cl_OEJ-WttL7G-eppzkFlDEgw",
+        "IDENTITY_HUB_CLIENT_SECRET": {
+          "__redacted__": {
+            "__sealed__": "v1._09Yyz8SQQd60QGA.VusjU-ByHIAkLOSo2TKUG1iKWBhBx4SBMYg38832gQVUZnl_BRTjONoSP_8IcD6CJoeKStxkOe-oQLbjSg"
+          }
+        }
+      },
+      "rootDir": "."
+    },
+    "attr": {
+      "projectId": 3426180,
+      "type": "prod",
+      "name": "elated-clam-974",
+      "reference": "production",
+      "url": "https://elated-clam-974.convex.cloud",
+      "siteUrl": "https://elated-clam-974.convex.site",
+      "hash": "6b7fc215f0267c985b8fb0a3dcab02a7fef6af5dbdf5b8ef3066258bd35ecc63",
+      "envNames": [
+        "IDENTITY_HUB_CLIENT_ID",
+        "IDENTITY_HUB_CLIENT_SECRET",
+        "IDENTITY_HUB_ISSUER"
+      ]
+    },
+    "bindings": [],
+    "providerVersion": 0,
+    "downstream": [],
+    "removalPolicy": "retain"
+  },
   "removalPolicy": "retain"
 }
