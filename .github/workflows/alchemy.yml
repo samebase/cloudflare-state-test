@@ -15,8 +15,8 @@ on:
   # exists already.
   workflow_dispatch: { inputs: { adopt: { type: boolean, default: false } } }
 permissions: { contents: write, pull-requests: write, id-token: write }
-# One run per stage at a time: the state store has no lock. A closed pull request keeps
-# its head_ref.
+# One run per stage at a time: a second deploy of a stage would fail at the lock of the state
+# store, so the runs of a stage wait in a queue. A closed pull request keeps its head_ref.
 concurrency: { group: "alchemy-${{ github.head_ref || github.ref_name }}", queue: max }
 jobs:
   alchemy:

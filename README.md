@@ -1,111 +1,88 @@
-# base
+# Alchemy state on a GitHub branch
 
-**Google sign-in that works on every pull request preview.** A starter for apps on
-[Convex](https://convex.dev), deployed by [Alchemy](https://alchemy.run) with one secret. No Google
-Cloud project, no OAuth client, no Samebase account.
+An example app that [Alchemy v2](https://alchemy.run) deploys, with its Alchemy state in this
+repository, on the branch
+[`alchemy-state-store`](https://github.com/samebase/cloudflare-state-test/tree/alchemy-state-store).
+The state needs no bucket, no database, and no extra account: the repository and the `GITHUB_TOKEN`
+of the run are enough.
 
-![The comment that a deploy leaves on a pull request, with the preview's URL and "Sign-in with github, google: on", beside the sign-in page of that preview, which names the repository.](./docs/readme/preview-sign-in.png)
+[Live site](https://elated-clam-974.convex.site) ·
+[The state](https://github.com/samebase/cloudflare-state-test/tree/alchemy-state-store) ·
+[The deploys](https://github.com/samebase/cloudflare-state-test/actions/workflows/alchemy.yml) ·
+[The store's package](https://github.com/samebase/samebase/tree/main/packages/alchemy-kit#github-state-store)
 
-[**Use this template**](https://github.com/samebase/base/generate) ·
-[Live demo](https://ideal-bandicoot-981.convex.site) ·
-[The other parts](https://github.com/samebase)
+## The whole setup
 
-## Start
-
-1. **Use this template** and create your repository.
-2. **Add one secret**, `CONVEX_ACCESS_TOKEN`: a team access token from the Convex dashboard (the
-   team, **Settings**, **Access Tokens**). `gh secret set CONVEX_ACCESS_TOKEN` asks for the value
-   without showing it.
-3. **Push to `main`**, or run `alchemy` from the **Actions** tab. About a minute later the log ends
-   with your URL, `https://<deployment>.convex.site`.
-
-That is the whole setup. The first run creates the Convex project, named after the repository, and
-its production deployment. From then on every push to `main` deploys, and every pull request gets a
-preview deployment with its URL in a comment, deleted when the pull request closes.
-
-![Use the template, add the secret CONVEX_ACCESS_TOKEN, run the deploy workflow, sign in with Google at the hub's page, which names the repository.](./docs/readme/deploy.gif)
-
-If the team already has a project with the repository's name, such as one that `pnpm run dev`
-created, the first run stops. Run it once with **adopt**: `gh workflow run alchemy.yml -f adopt=true`.
-
-## The whole sign-in setup
-
-Google and GitHub want each callback URL registered by hand, so a preview with a new URL cannot sign
-in. Here each deploy registers its own URL at
-[Samebase's identity hub](https://github.com/samebase/identity-hub), with GitHub's token of the run
-as proof of the repository. One resource in `alchemy.run.ts` does it:
+One line in [`alchemy.run.ts`](./alchemy.run.ts) gives the stack its state store (shortened here):
 
 ```ts
-IdentityHub.Client("IdentityHubClient", {
-  hub: { issuer: "https://id.samebase.com" },
-  connectors: ["google", "github"],
-  redirectUris: [Output.interpolate`${deployment.siteUrl}/auth/hub/callback`],
-  deploymentType: stage === "prod" ? "production" : "preview",
-});
+import * as GitHubState from "@samebase/alchemy-kit/github-state";
+
+export default Alchemy.Stack(
+  repository,
+  {
+    providers: Convex.providers(),
+    state: Convex.withRunRecord(GitHubState.state()),
+  },
+  program,
+);
 ```
 
-Accounts live in your app: a user is `google:<id>`, and **Delete account** removes them. Guest
-sign-in works without the hub.
+`withRunRecord` adds the commit and the run to each stage output. The store works without it.
 
-## What is fixed, and what is yours
+The workflow [`alchemy.yml`](./.github/workflows/alchemy.yml) gives each run two things:
 
-Two things are fixed:
+- `permissions: contents: write`, so the run writes the branch with its own `GITHUB_TOKEN`.
+- The repository secret `ALCHEMY_GITHUB_STATE_KEY`, which seals each secret in the state.
 
-- **Convex** runs the real-time backend and the database, and serves the app's files and its
-  server-rendered pages through [convex-hosting](https://github.com/samebase/convex-hosting). There
-  is no second host to set up or pay for.
-- **[Alchemy](https://alchemy.run)** deploys it from one file, `alchemy.run.ts`, with
-  [@samebase/alchemy-convex](https://github.com/samebase/samebase/tree/main/packages/alchemy-convex):
-  `main` to the stage `prod`, each pull request to `pr-<number>`. No deploy key is stored anywhere;
-  each run mints a short-lived one from the team token.
+The first deploy made the two branches. The
+[quick start](https://github.com/samebase/samebase/tree/main/packages/alchemy-kit#quick-start) has
+the same steps for your repository.
 
-The rest is a starting point:
+## Where to look
 
-- **The interface** is React 19 with TanStack Start and shadcn/ui, with pages rendered on the
-  server. It is the replaceable part: an agent can rewrite it for another framework.
-- **Sign-in** is Convex Auth, with the session in an httpOnly cookie, so signed-in pages render on
-  the server.
-- **The example app** is a public todo list. Guests sign in with one click, see updates in real
-  time, and scan a QR code to open the list on another device.
-- **The tools** are Vite+ for dev, format, lint, test, and build, Node.js 24, and Renovate for the
-  versions.
+- **[The state](https://github.com/samebase/cloudflare-state-test/tree/alchemy-state-store)** is one
+  JSON file for each resource, `{stack}/{stage}/{resource}.json`.
+  [`prod/IdentityHubClient.json`](https://github.com/samebase/cloudflare-state-test/blob/alchemy-state-store/samebase/cloudflare-state-test/prod/IdentityHubClient.json)
+  is plain JSON, and its client secret is sealed with AES-256-GCM.
+- **[Each write is a commit](https://github.com/samebase/cloudflare-state-test/commits/alchemy-state-store)**
+  that names what it changed, such as `samebase/cloudflare-state-test prod: set Site`.
+- **[The lock](https://github.com/samebase/cloudflare-state-test/commits/alchemy-state-store-lock)**
+  of each stage is on the branch `alchemy-state-store-lock`. A second deploy of the same stage
+  fails at once.
+- **The stages.** A push to `main` deploys the stage `prod`. Each pull request deploys the stage
+  `pr-<number>`, and closing it removes the preview and its state.
+- **A preview and production deploy at the same time.** A preview reads the Convex project from the
+  state of `prod` (`Convex.Project.ref("Project", { stage: "prod" })`). That read takes no lock, so
+  each deploy holds only the lock of its own stage.
 
-## Local development
+## How the store works
 
-Install the [Vite+](https://viteplus.dev/guide/) CLI, which installs the Node.js version from
-`.node-version` with `vp env install`. Then:
+- It is Alchemy's own `makeBucketState` (`alchemy/State/BucketState`) with a Git branch as the
+  bucket, read and written through GitHub's Git database API.
+- All the writes that are waiting go into one commit. When another deploy moved the branch first,
+  the store reads the new head and tries again.
+- The lock is a lease file. A deploy renews it while it runs, and it ends after 60 seconds if the
+  deploy stops without a release.
+- The sealing of secrets is the package's own until Alchemy releases state encryption
+  ([alchemy-run/alchemy#3167](https://github.com/alchemy-run/alchemy/pull/3167)).
 
-```sh
-corepack enable
-pnpm install
-pnpm run dev
-```
+The [package's README](https://github.com/samebase/samebase/tree/main/packages/alchemy-kit#limits)
+has the limits, and
+[`GitHubState.ts`](https://github.com/samebase/samebase/blob/main/packages/alchemy-kit/src/github-state/GitHubState.ts)
+is the source.
 
-`pnpm run dev` starts Convex and TanStack Start together on a cloud development deployment of this
-checkout. A linked Git worktree gets its own.
+## The app
 
-**The first run on a fresh clone stops with an error.** That is expected: the deployment has no
-Convex Auth keys and no server build yet. Once Convex has signed you in and written `.env.local`,
-stop it and run `pnpm run deploy:dev` once. It creates the keys, uploads the build, and pushes. From
-then on `pnpm run dev` works as usual.
+The app is the [samebase/base](https://github.com/samebase/base) starter: a public todo list on
+[Convex](https://convex.dev), with Google sign-in on every pull request preview. Its README has the
+app, the sign-in, and local development.
 
-For the **Sign in** button in development, after the first deploy to `main`, run
-`pnpm run identity-hub:dev-client --stage dev-<your name>` once. It gives the development deployment
-its own hub client. See [`docs/local-setup.md`](./docs/local-setup.md) for the details and
-troubleshooting on macOS, Linux, and Windows.
+One thing differs here: a local `alchemy` run needs `GITHUB_TOKEN` and `ALCHEMY_GITHUB_STATE_KEY` in
+its environment. See
+[From your laptop](https://github.com/samebase/samebase/tree/main/packages/alchemy-kit#from-your-laptop).
 
-| Command                            | Purpose                                               |
-| ---------------------------------- | ----------------------------------------------------- |
-| `pnpm run check`                   | Format, lint, type-check, and test                    |
-| `pnpm run build`                   | Run the checks and build the app into `dist/client`   |
-| `pnpm run deploy:dev`              | Build, upload, and push to the development deployment |
-| `pnpm run identity-hub:dev-client` | Give the development deployment a hub client (Google) |
-| `pnpm run deploy`                  | Build, upload, and push to production                 |
-
-## Learn more
-
-- [How deploys work](./docs/deploys.md): the stages, the state store, local `alchemy deploy`, and
-  renaming an old `main` stage to `prod`.
+- [How deploys work](./docs/deploys.md): the stages, the state, and local `alchemy deploy`.
 - [Google sign-in](./docs/google-sign-in.md): the hub, `/samebase-verification.json`, apps on other
   hosts, the hub's terms, and how to run your own hub.
 - [Files](./docs/files.md): where things are, and which files are generated.
