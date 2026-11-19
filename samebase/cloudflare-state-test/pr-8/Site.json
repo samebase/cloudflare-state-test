@@ -1,0 +1,26 @@
+{
+  "status": "creating",
+  "fqn": "Site",
+  "logicalId": "Site",
+  "instanceId": "99d8054ff906c9774a41e41976e0bff6",
+  "downstream": [],
+  "props": {
+    "project": {
+      "projectId": 3426180,
+      "slug": "cloudflare-state-test",
+      "name": "cloudflare-state-test",
+      "teamId": 38516,
+      "prodDeploymentName": "elated-clam-974",
+      "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
+    },
+    "type": "preview",
+    "name": "pr-8",
+    "env": {},
+    "rootDir": "."
+  },
+  "providerVersion": 0,
+  "resourceType": "Convex.Deployment",
+  "bindings": [],
+  "removalPolicy": "destroy",
+  "propsIncomplete": true
+}
