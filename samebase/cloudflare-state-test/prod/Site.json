@@ -1,5 +1,5 @@
 {
-  "status": "updated",
+  "status": "updating",
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "93802826262d629283ba8fa155e36dce",
@@ -16,10 +16,10 @@
     "type": "prod",
     "env": {
       "IDENTITY_HUB_ISSUER": "https://id.samebase.com",
-      "IDENTITY_HUB_CLIENT_ID": "cl_OEJ-WttL7G-eppzkFlDEgw",
+      "IDENTITY_HUB_CLIENT_ID": "cl_Swb2BELKOQmjPlhlpQ3peA",
       "IDENTITY_HUB_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.saCRcTB_lQ8CNW21.OmNhI5KhlBHY2HfJFEddlrmIlsSVuJGB-ufhJCNMwEqseN9g7_n6u9oL3S2GYmk2CaKMHW6LD1u_dzumsw"
+          "__sealed__": "v1.l_LHY2iYyTAkXixe.aNFlZfJ8q4Y5PEuKHssD5biEnc52hwzSat8Ru3U4N_aU6Z6EMjOxSfBoOolL44qeSQKZbvEdbUczBTAocQ"
         }
       }
     },
@@ -39,8 +39,54 @@
       "IDENTITY_HUB_ISSUER"
     ]
   },
-  "bindings": [],
   "providerVersion": 0,
+  "bindings": [],
   "downstream": [],
+  "old": {
+    "status": "updated",
+    "fqn": "Site",
+    "logicalId": "Site",
+    "instanceId": "93802826262d629283ba8fa155e36dce",
+    "resourceType": "Convex.Deployment",
+    "props": {
+      "project": {
+        "projectId": 3426180,
+        "slug": "cloudflare-state-test",
+        "name": "cloudflare-state-test",
+        "teamId": 38516,
+        "prodDeploymentName": "elated-clam-974",
+        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
+      },
+      "type": "prod",
+      "env": {
+        "IDENTITY_HUB_ISSUER": "https://id.samebase.com",
+        "IDENTITY_HUB_CLIENT_ID": "cl_OEJ-WttL7G-eppzkFlDEgw",
+        "IDENTITY_HUB_CLIENT_SECRET": {
+          "__redacted__": {
+            "__sealed__": "v1.tAOBaBcRZU1sjbM3.hswW2NvhxKchL9KkY8encWF3Y_tSrGdRmUeFbg08PJajoAtvSNlSSmXrUUPehh2aTRAgG5l2_l4c0SkIqw"
+          }
+        }
+      },
+      "rootDir": "."
+    },
+    "attr": {
+      "projectId": 3426180,
+      "type": "prod",
+      "name": "elated-clam-974",
+      "reference": "production",
+      "url": "https://elated-clam-974.convex.cloud",
+      "siteUrl": "https://elated-clam-974.convex.site",
+      "hash": "6b7fc215f0267c985b8fb0a3dcab02a7fef6af5dbdf5b8ef3066258bd35ecc63",
+      "envNames": [
+        "IDENTITY_HUB_CLIENT_ID",
+        "IDENTITY_HUB_CLIENT_SECRET",
+        "IDENTITY_HUB_ISSUER"
+      ]
+    },
+    "bindings": [],
+    "providerVersion": 0,
+    "downstream": [],
+    "removalPolicy": "retain"
+  },
   "removalPolicy": "retain"
 }
