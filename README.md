@@ -21,7 +21,7 @@ import * as GitHubState from "@samebase/alchemy-kit/github-state";
 export default Alchemy.Stack(
   repository,
   {
-    providers: Convex.providers(),
+    providers: Layer.mergeAll(Convex.providers(), IdentityBroker.providers()),
     state: Convex.withRunRecord(GitHubState.state()),
   },
   program,
@@ -83,8 +83,8 @@ its environment. See
 [From your laptop](https://github.com/samebase/samebase/tree/main/packages/alchemy-kit#from-your-laptop).
 
 - [How deploys work](./docs/deploys.md): the stages, the state, and local `alchemy deploy`.
-- [Google sign-in](./docs/google-sign-in.md): the hub, `/samebase-verification.json`, apps on other
-  hosts, the hub's terms, and how to run your own hub.
+- [Google sign-in](./docs/google-sign-in.md): the broker, `/samebase-verification.json`, apps on
+  other hosts, the broker's terms, and how to run your own broker.
 - [Files](./docs/files.md): where things are, and which files are generated.
 
 ## License
