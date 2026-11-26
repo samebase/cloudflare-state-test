@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "93802826262d629283ba8fa155e36dce",
@@ -19,7 +19,7 @@
       "IDENTITY_BROKER_CLIENT_ID": "cl_Swb2BELKOQmjPlhlpQ3peA",
       "IDENTITY_BROKER_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.fQEDNqetMTrM-UeY.-P0TrRRGHFiy89WFLQz6MIHbT12yT4lixvNdFvKsnyloJqmLUZTZAdCNbVGf2Bdpy99cD9WOqHgMbLaS3Q"
+          "__sealed__": "v1.JFLla6iC4PAOyuip.s9BnCpCbvPzDFh6rXnNECRKS6xe9kPD7uo-yDyI38lYXrfSrAuO5BGXY5IX9nR6wTEl-jydkUGv8G2CL_g"
         }
       }
     },
@@ -32,61 +32,15 @@
     "reference": "production",
     "url": "https://elated-clam-974.convex.cloud",
     "siteUrl": "https://elated-clam-974.convex.site",
-    "hash": "442b1ee34653e81c299ee9227e5ff853e9a56072612cd58c01d8fb1644c771b4",
+    "hash": "8e8e1e79f504c622f5b977b18a7714951a7331bfcac2564d49c61d1fb54b367f",
     "envNames": [
-      "IDENTITY_HUB_CLIENT_ID",
-      "IDENTITY_HUB_CLIENT_SECRET",
-      "IDENTITY_HUB_ISSUER"
+      "IDENTITY_BROKER_CLIENT_ID",
+      "IDENTITY_BROKER_CLIENT_SECRET",
+      "IDENTITY_BROKER_ISSUER"
     ]
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
-  "old": {
-    "status": "updated",
-    "fqn": "Site",
-    "logicalId": "Site",
-    "instanceId": "93802826262d629283ba8fa155e36dce",
-    "resourceType": "Convex.Deployment",
-    "props": {
-      "project": {
-        "projectId": 3426180,
-        "slug": "cloudflare-state-test",
-        "name": "cloudflare-state-test",
-        "teamId": 38516,
-        "prodDeploymentName": "elated-clam-974",
-        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
-      },
-      "type": "prod",
-      "env": {
-        "IDENTITY_HUB_ISSUER": "https://id.samebase.com",
-        "IDENTITY_HUB_CLIENT_ID": "cl_Swb2BELKOQmjPlhlpQ3peA",
-        "IDENTITY_HUB_CLIENT_SECRET": {
-          "__redacted__": {
-            "__sealed__": "v1.iMGf6JRvtt-YHsKv.kMiCqESS-v3cHxBby2qJlrvyFh47J0omeB4zBZb-9OSQlCz2yOhYdqxqX6uq7tZvx3UDjbUTSFBPzyI_aA"
-          }
-        }
-      },
-      "rootDir": "."
-    },
-    "attr": {
-      "projectId": 3426180,
-      "type": "prod",
-      "name": "elated-clam-974",
-      "reference": "production",
-      "url": "https://elated-clam-974.convex.cloud",
-      "siteUrl": "https://elated-clam-974.convex.site",
-      "hash": "442b1ee34653e81c299ee9227e5ff853e9a56072612cd58c01d8fb1644c771b4",
-      "envNames": [
-        "IDENTITY_HUB_CLIENT_ID",
-        "IDENTITY_HUB_CLIENT_SECRET",
-        "IDENTITY_HUB_ISSUER"
-      ]
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [],
-    "removalPolicy": "retain"
-  },
   "removalPolicy": "retain"
 }
