@@ -1,5 +1,5 @@
 {
-  "status": "created",
+  "status": "deleting",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "f0dd235b82d35915f5e5edd292092e45",
@@ -48,10 +48,10 @@
       "SAMEBASE_REPOSITORY_ID"
     ]
   },
-  "bindings": [],
-  "providerVersion": 0,
   "downstream": [
     "IdentityHubClient"
   ],
+  "providerVersion": 0,
+  "bindings": [],
   "removalPolicy": "destroy"
 }
