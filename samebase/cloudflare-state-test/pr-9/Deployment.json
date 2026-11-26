@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "f0dd235b82d35915f5e5edd292092e45",
@@ -35,8 +35,21 @@
     },
     "rootDir": "."
   },
-  "providerVersion": 0,
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "shocking-owl-547",
+    "reference": "preview/pr-9",
+    "previewName": "pr-9",
+    "url": "https://shocking-owl-547.convex.cloud",
+    "siteUrl": "https://shocking-owl-547.convex.site",
+    "hash": "96f5e675c3835f4c658a3067b2460d25c99123cab39a639eceb839d88477a1dd",
+    "envNames": [
+      "SAMEBASE_REPOSITORY_ID"
+    ]
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "IdentityHubClient"
   ],
