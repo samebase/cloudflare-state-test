@@ -13,7 +13,7 @@
       "github"
     ],
     "redirectUris": [
-      null
+      "https://shocking-owl-547.convex.site/auth/hub/callback"
     ],
     "deploymentType": "preview",
     "softwareVersion": "a334ceaab3a7cff112be6ec191f90219e2023ed4"
@@ -23,6 +23,5 @@
   "downstream": [
     "Site"
   ],
-  "removalPolicy": "destroy",
-  "propsIncomplete": true
+  "removalPolicy": "destroy"
 }
