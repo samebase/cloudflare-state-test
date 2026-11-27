@@ -15,12 +15,19 @@
     },
     "type": "preview",
     "name": "pr-10",
-    "env": {},
+    "env": {
+      "IDENTITY_BROKER_ISSUER": "https://id.samebase.com",
+      "IDENTITY_BROKER_CLIENT_ID": "cl_G7IBwp52VAtsj8OVXiraxQ",
+      "IDENTITY_BROKER_CLIENT_SECRET": {
+        "__redacted__": {
+          "__sealed__": "v1.3Bonmk-_zbde-mfN.nqPjzA6WkizEVx5NGcbN02urvRULzREEANM8OgfOwCu-qtuZm2qX-KXTr2_ZFy8aBCHpOgcA4ofHczgF3g"
+        }
+      }
+    },
     "rootDir": "."
   },
   "providerVersion": 0,
   "bindings": [],
   "downstream": [],
-  "removalPolicy": "destroy",
-  "propsIncomplete": true
+  "removalPolicy": "destroy"
 }
