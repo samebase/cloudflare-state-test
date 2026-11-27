@@ -6,15 +6,14 @@
 # `contents: write` lets a run write that branch with its own token, and the secret
 # ALCHEMY_GITHUB_STATE_KEY seals each secret in the state. Every run also needs the team
 # token CONVEX_ACCESS_TOKEN; it mints the deploy keys itself. Only the Alchemy steps get
-# the secrets. `id-token: write` lets a deploy
-# ask Samebase for the deployment's Google sign-in client with GitHub's token of the run.
+# the secrets.
 on:
   push: { branches: [main] }
   pull_request: { types: [opened, synchronize, reopened, closed] }
   # Run once on main with adopt to take over a project with the name of the repository that
   # exists already.
   workflow_dispatch: { inputs: { adopt: { type: boolean, default: false } } }
-permissions: { contents: write, pull-requests: write, id-token: write }
+permissions: { contents: write, pull-requests: write }
 # One run per stage at a time: a second deploy of a stage would fail at the lock of the state
 # store, so the runs of a stage wait in a queue. A closed pull request keeps its head_ref.
 concurrency: { group: "alchemy-${{ github.head_ref || github.ref_name }}", queue: max }
