@@ -1,28 +1,14 @@
 {
-  "status": "updated",
+  "status": "updating",
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "93802826262d629283ba8fa155e36dce",
   "resourceType": "Convex.Deployment",
   "props": {
     "project": {
-      "projectId": 3426180,
-      "slug": "cloudflare-state-test",
-      "name": "cloudflare-state-test",
-      "teamId": 38516,
-      "prodDeploymentName": "elated-clam-974",
-      "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
+      "projectId": 3426180
     },
     "type": "prod",
-    "env": {
-      "IDENTITY_BROKER_ISSUER": "https://id.samebase.com",
-      "IDENTITY_BROKER_CLIENT_ID": "cl_Swb2BELKOQmjPlhlpQ3peA",
-      "IDENTITY_BROKER_CLIENT_SECRET": {
-        "__redacted__": {
-          "__sealed__": "v1.JFLla6iC4PAOyuip.s9BnCpCbvPzDFh6rXnNECRKS6xe9kPD7uo-yDyI38lYXrfSrAuO5BGXY5IX9nR6wTEl-jydkUGv8G2CL_g"
-        }
-      }
-    },
     "rootDir": "."
   },
   "attr": {
@@ -39,8 +25,54 @@
       "IDENTITY_BROKER_ISSUER"
     ]
   },
-  "bindings": [],
   "providerVersion": 0,
+  "bindings": [],
   "downstream": [],
+  "old": {
+    "status": "updated",
+    "fqn": "Site",
+    "logicalId": "Site",
+    "instanceId": "93802826262d629283ba8fa155e36dce",
+    "resourceType": "Convex.Deployment",
+    "props": {
+      "project": {
+        "projectId": 3426180,
+        "slug": "cloudflare-state-test",
+        "name": "cloudflare-state-test",
+        "teamId": 38516,
+        "prodDeploymentName": "elated-clam-974",
+        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
+      },
+      "type": "prod",
+      "env": {
+        "IDENTITY_BROKER_ISSUER": "https://id.samebase.com",
+        "IDENTITY_BROKER_CLIENT_ID": "cl_Swb2BELKOQmjPlhlpQ3peA",
+        "IDENTITY_BROKER_CLIENT_SECRET": {
+          "__redacted__": {
+            "__sealed__": "v1.TYxqUBpH2YeBqrPQ.XDBn4FyJb8oKvnLVUItXz72g1rXloorGqo-950LCswISpKBJiVx7FcYPO71SCmZC87pt91Qv6tiCcwewGw"
+          }
+        }
+      },
+      "rootDir": "."
+    },
+    "attr": {
+      "projectId": 3426180,
+      "type": "prod",
+      "name": "elated-clam-974",
+      "reference": "production",
+      "url": "https://elated-clam-974.convex.cloud",
+      "siteUrl": "https://elated-clam-974.convex.site",
+      "hash": "8e8e1e79f504c622f5b977b18a7714951a7331bfcac2564d49c61d1fb54b367f",
+      "envNames": [
+        "IDENTITY_BROKER_CLIENT_ID",
+        "IDENTITY_BROKER_CLIENT_SECRET",
+        "IDENTITY_BROKER_ISSUER"
+      ]
+    },
+    "bindings": [],
+    "providerVersion": 0,
+    "downstream": [],
+    "removalPolicy": "retain"
+  },
   "removalPolicy": "retain"
 }
