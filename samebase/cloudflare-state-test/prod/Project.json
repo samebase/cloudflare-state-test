@@ -18,8 +18,7 @@
   "bindings": [],
   "providerVersion": 0,
   "downstream": [
-    "Deployment",
-    "Site"
+    "Deployment"
   ],
   "removalPolicy": "destroy"
 }

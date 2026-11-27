@@ -1,5 +1,5 @@
 {
-  "status": "updated",
+  "status": "updating",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "54db56d449ba3346ef82179abbb36e60",
@@ -29,9 +29,6 @@
         "tsconfig*.json"
       ]
     },
-    "env": {
-      "SAMEBASE_REPOSITORY_ID": "1455706513"
-    },
     "rootDir": "."
   },
   "attr": {
@@ -46,10 +43,65 @@
       "SAMEBASE_REPOSITORY_ID"
     ]
   },
-  "bindings": [],
   "providerVersion": 0,
+  "bindings": [],
   "downstream": [
-    "IdentityHubClient"
+    "Site"
   ],
+  "old": {
+    "status": "updated",
+    "fqn": "Deployment",
+    "logicalId": "Deployment",
+    "instanceId": "54db56d449ba3346ef82179abbb36e60",
+    "resourceType": "Convex.Deployment",
+    "props": {
+      "project": {
+        "projectId": 3426180,
+        "slug": "cloudflare-state-test",
+        "name": "cloudflare-state-test",
+        "teamId": 38516,
+        "prodDeploymentName": "elated-clam-974",
+        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
+      },
+      "type": "prod",
+      "source": {
+        "path": "./convex",
+        "command": [
+          "node",
+          "--run",
+          "deploy"
+        ],
+        "include": [
+          "src/**",
+          "public/**",
+          "scripts/**",
+          "vite.config.ts",
+          "tsconfig*.json"
+        ]
+      },
+      "env": {
+        "SAMEBASE_REPOSITORY_ID": "1455706513"
+      },
+      "rootDir": "."
+    },
+    "attr": {
+      "projectId": 3426180,
+      "type": "prod",
+      "name": "elated-clam-974",
+      "reference": "production",
+      "url": "https://elated-clam-974.convex.cloud",
+      "siteUrl": "https://elated-clam-974.convex.site",
+      "hash": "db85659be26c77a13c171788af3d0b5c84701aa61e3bd3de9c8a1142ce97abe7",
+      "envNames": [
+        "SAMEBASE_REPOSITORY_ID"
+      ]
+    },
+    "bindings": [],
+    "providerVersion": 0,
+    "downstream": [
+      "IdentityHubClient"
+    ],
+    "removalPolicy": "retain"
+  },
   "removalPolicy": "retain"
 }
