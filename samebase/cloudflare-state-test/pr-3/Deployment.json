@@ -30,15 +30,12 @@
         "tsconfig*.json"
       ]
     },
-    "env": {
-      "SAMEBASE_REPOSITORY_ID": "1455706513"
-    },
     "rootDir": "."
   },
   "providerVersion": 0,
   "bindings": [],
   "downstream": [
-    "IdentityHubClient"
+    "Site"
   ],
   "removalPolicy": "destroy"
 }
