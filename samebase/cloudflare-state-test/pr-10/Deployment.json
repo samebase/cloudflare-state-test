@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "9a83effc31d60da33f0e285dccf569da",
@@ -40,72 +40,13 @@
     "previewName": "pr-10",
     "url": "https://wary-dinosaur-225.convex.cloud",
     "siteUrl": "https://wary-dinosaur-225.convex.site",
-    "hash": "5a4d1f08d6a0324b620a122e8bd8a1967bc254897709fa4bef37f57c58d71582",
-    "envNames": [
-      "SAMEBASE_REPOSITORY_ID"
-    ]
+    "hash": "761a925388fc2b7fece4fafc1ade200bb078a8dd2ebcbf9f6462b2a9925ff849",
+    "envNames": []
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "Site"
   ],
-  "old": {
-    "status": "created",
-    "fqn": "Deployment",
-    "logicalId": "Deployment",
-    "instanceId": "9a83effc31d60da33f0e285dccf569da",
-    "resourceType": "Convex.Deployment",
-    "props": {
-      "project": {
-        "projectId": 3426180,
-        "slug": "cloudflare-state-test",
-        "name": "cloudflare-state-test",
-        "teamId": 38516,
-        "prodDeploymentName": "elated-clam-974",
-        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
-      },
-      "type": "preview",
-      "name": "pr-10",
-      "source": {
-        "path": "./convex",
-        "command": [
-          "node",
-          "--run",
-          "deploy"
-        ],
-        "include": [
-          "src/**",
-          "public/**",
-          "scripts/**",
-          "vite.config.ts",
-          "tsconfig*.json"
-        ]
-      },
-      "env": {
-        "SAMEBASE_REPOSITORY_ID": "1455706513"
-      },
-      "rootDir": "."
-    },
-    "attr": {
-      "projectId": 3426180,
-      "type": "preview",
-      "name": "wary-dinosaur-225",
-      "reference": "preview/pr-10",
-      "previewName": "pr-10",
-      "url": "https://wary-dinosaur-225.convex.cloud",
-      "siteUrl": "https://wary-dinosaur-225.convex.site",
-      "hash": "5a4d1f08d6a0324b620a122e8bd8a1967bc254897709fa4bef37f57c58d71582",
-      "envNames": [
-        "SAMEBASE_REPOSITORY_ID"
-      ]
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [
-      "IdentityHubClient"
-    ],
-    "removalPolicy": "destroy"
-  },
   "removalPolicy": "destroy"
 }
