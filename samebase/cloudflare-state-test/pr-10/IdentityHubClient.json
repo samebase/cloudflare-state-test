@@ -1,5 +1,5 @@
 {
-  "status": "created",
+  "status": "deleting",
   "fqn": "IdentityHubClient",
   "logicalId": "IdentityHubClient",
   "instanceId": "4e4913a1c50b2fc9199f046e3af91427",
@@ -24,12 +24,12 @@
     "clientId": "cl_G7IBwp52VAtsj8OVXiraxQ",
     "clientSecret": {
       "__redacted__": {
-        "__sealed__": "v1.H1yaFy-ampBOj5Ov.l-iEDFww7LAuS0Otc-QCGaROEfA61ROLMqrcy4GEb-Pxf3cSg6-c0UpDjDuVSsbubb3fEZZ1imiCQdmwyw"
+        "__sealed__": "v1.7xosK3eG5w3YViGP.D6MDHsrgY5JoeKhjP6a9-fVf9o_kgSD-ENwMwgJkTbRS9xyRdlNgwaRvx-XqMv78P35iFhKyM_krUTSZsw"
       }
     },
     "registrationAccessToken": {
       "__redacted__": {
-        "__sealed__": "v1.dNlrbm4FsZ6K8Cz7.v0AntQPK7vKMeQTsaTZf7NO4kispqzklzNXzt9_h7tt3xRauallvCkrh9rVyB0LrQLJo7ifsP1OyoneW2Q"
+        "__sealed__": "v1.WD4t_SiYcvxYHPfA.lZJWpf2S1X3S4lJyL4hX6f65o4Ed94fnLs-j33m2SE93N5JpoEUl4xMx_wcNHWoIJHDCoSHwiBFCuQvYyw"
       }
     },
     "registrationClientUri": "https://id.samebase.com/register/cl_G7IBwp52VAtsj8OVXiraxQ",
@@ -44,15 +44,15 @@
     ],
     "initialAccessToken": {
       "__redacted__": {
-        "__sealed__": "v1.BwAhYuqVxYHq2gUQ.ujdfG5ISeztgTfg_83yaO5QV"
+        "__sealed__": "v1.WF5g4klM_Ej90rpq.FKuj7MRpyUQJvAVQxFP0gb-n"
       }
     },
     "repository": ""
   },
-  "bindings": [],
-  "providerVersion": 0,
   "downstream": [
     "Site"
   ],
+  "providerVersion": 0,
+  "bindings": [],
   "removalPolicy": "destroy"
 }
