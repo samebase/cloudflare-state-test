@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "IdentityHubClient",
   "logicalId": "IdentityHubClient",
   "instanceId": "4e4913a1c50b2fc9199f046e3af91427",
@@ -18,8 +18,39 @@
     "deploymentType": "preview",
     "softwareVersion": "f69921298df50790a30282f075b0fe8f6090fe10"
   },
-  "providerVersion": 0,
+  "attr": {
+    "status": "on",
+    "issuer": "https://id.samebase.com",
+    "clientId": "cl_G7IBwp52VAtsj8OVXiraxQ",
+    "clientSecret": {
+      "__redacted__": {
+        "__sealed__": "v1.H1yaFy-ampBOj5Ov.l-iEDFww7LAuS0Otc-QCGaROEfA61ROLMqrcy4GEb-Pxf3cSg6-c0UpDjDuVSsbubb3fEZZ1imiCQdmwyw"
+      }
+    },
+    "registrationAccessToken": {
+      "__redacted__": {
+        "__sealed__": "v1.dNlrbm4FsZ6K8Cz7.v0AntQPK7vKMeQTsaTZf7NO4kispqzklzNXzt9_h7tt3xRauallvCkrh9rVyB0LrQLJo7ifsP1OyoneW2Q"
+      }
+    },
+    "registrationClientUri": "https://id.samebase.com/register/cl_G7IBwp52VAtsj8OVXiraxQ",
+    "deploymentType": "preview",
+    "app": "app",
+    "redirectUris": [
+      "https://wary-dinosaur-225.convex.site/auth/hub/callback"
+    ],
+    "connectors": [
+      "github",
+      "google"
+    ],
+    "initialAccessToken": {
+      "__redacted__": {
+        "__sealed__": "v1.BwAhYuqVxYHq2gUQ.ujdfG5ISeztgTfg_83yaO5QV"
+      }
+    },
+    "repository": ""
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [
     "Site"
   ],
