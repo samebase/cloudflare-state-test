@@ -20,11 +20,21 @@
       "IDENTITY_BROKER_CLIENT_ID": "cl_G7IBwp52VAtsj8OVXiraxQ",
       "IDENTITY_BROKER_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.3Bonmk-_zbde-mfN.nqPjzA6WkizEVx5NGcbN02urvRULzREEANM8OgfOwCu-qtuZm2qX-KXTr2_ZFy8aBCHpOgcA4ofHczgF3g"
+          "__sealed__": "v1.sGZgyb6hnZufScwV.r8PCrf0cvvLHtos0p5Pq_yUXtbFNRBysyWtQwVmv9zidPzplQzpppAN02d-j-GKwQmCrqk0ZU8iNW-Ih9w"
         }
       }
     },
     "rootDir": "."
+  },
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "wary-dinosaur-225",
+    "reference": "preview/pr-10",
+    "previewName": "pr-10",
+    "url": "https://wary-dinosaur-225.convex.cloud",
+    "siteUrl": "https://wary-dinosaur-225.convex.site",
+    "envNames": []
   },
   "providerVersion": 0,
   "bindings": [],
