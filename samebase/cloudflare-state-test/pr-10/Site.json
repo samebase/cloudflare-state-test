@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "40465038b710b147f1935e29707654af",
@@ -20,7 +20,7 @@
       "IDENTITY_BROKER_CLIENT_ID": "cl_G7IBwp52VAtsj8OVXiraxQ",
       "IDENTITY_BROKER_CLIENT_SECRET": {
         "__redacted__": {
-          "__sealed__": "v1.sGZgyb6hnZufScwV.r8PCrf0cvvLHtos0p5Pq_yUXtbFNRBysyWtQwVmv9zidPzplQzpppAN02d-j-GKwQmCrqk0ZU8iNW-Ih9w"
+          "__sealed__": "v1.mwO8KtjcFvVBRiU_.zPPlwtq_XXoFSujhyhV23nUgqc5KGtbxMO6N8ZO7KWxjvr8c8ltwQjjLU9D2C_gn2neciJoAE451sSYm7Q"
         }
       }
     },
@@ -34,10 +34,15 @@
     "previewName": "pr-10",
     "url": "https://wary-dinosaur-225.convex.cloud",
     "siteUrl": "https://wary-dinosaur-225.convex.site",
-    "envNames": []
+    "hash": "b16e69c13ceb3393b4361720ea8b095c02bcbece33540b192ae118ceb4b3a8ba",
+    "envNames": [
+      "IDENTITY_BROKER_CLIENT_ID",
+      "IDENTITY_BROKER_CLIENT_SECRET",
+      "IDENTITY_BROKER_ISSUER"
+    ]
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
   "removalPolicy": "destroy"
 }
