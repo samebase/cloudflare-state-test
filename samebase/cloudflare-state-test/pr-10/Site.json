@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "Site",
   "logicalId": "Site",
   "instanceId": "40465038b710b147f1935e29707654af",
@@ -20,63 +20,10 @@
     "previewName": "pr-10",
     "url": "https://wary-dinosaur-225.convex.cloud",
     "siteUrl": "https://wary-dinosaur-225.convex.site",
-    "hash": "b16e69c13ceb3393b4361720ea8b095c02bcbece33540b192ae118ceb4b3a8ba",
-    "envNames": [
-      "IDENTITY_BROKER_CLIENT_ID",
-      "IDENTITY_BROKER_CLIENT_SECRET",
-      "IDENTITY_BROKER_ISSUER"
-    ]
+    "envNames": []
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
-  "old": {
-    "status": "created",
-    "fqn": "Site",
-    "logicalId": "Site",
-    "instanceId": "40465038b710b147f1935e29707654af",
-    "resourceType": "Convex.Deployment",
-    "props": {
-      "project": {
-        "projectId": 3426180,
-        "slug": "cloudflare-state-test",
-        "name": "cloudflare-state-test",
-        "teamId": 38516,
-        "prodDeploymentName": "elated-clam-974",
-        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
-      },
-      "type": "preview",
-      "name": "pr-10",
-      "env": {
-        "IDENTITY_BROKER_ISSUER": "https://id.samebase.com",
-        "IDENTITY_BROKER_CLIENT_ID": "cl_G7IBwp52VAtsj8OVXiraxQ",
-        "IDENTITY_BROKER_CLIENT_SECRET": {
-          "__redacted__": {
-            "__sealed__": "v1.cXQHd6lxyeGvZowT.YsrWYMLGf8qae7E26P0Rj5qjM_XqYYe-UjBdW01z1VpbVOODE4vIERVwg6zCULdFQi1p9pSe6mlh6FAx7g"
-          }
-        }
-      },
-      "rootDir": "."
-    },
-    "attr": {
-      "projectId": 3426180,
-      "type": "preview",
-      "name": "wary-dinosaur-225",
-      "reference": "preview/pr-10",
-      "previewName": "pr-10",
-      "url": "https://wary-dinosaur-225.convex.cloud",
-      "siteUrl": "https://wary-dinosaur-225.convex.site",
-      "hash": "b16e69c13ceb3393b4361720ea8b095c02bcbece33540b192ae118ceb4b3a8ba",
-      "envNames": [
-        "IDENTITY_BROKER_CLIENT_ID",
-        "IDENTITY_BROKER_CLIENT_SECRET",
-        "IDENTITY_BROKER_ISSUER"
-      ]
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [],
-    "removalPolicy": "destroy"
-  },
   "removalPolicy": "retain"
 }
