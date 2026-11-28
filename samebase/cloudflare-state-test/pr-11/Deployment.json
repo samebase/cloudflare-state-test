@@ -1,5 +1,5 @@
 {
-  "status": "created",
+  "status": "deleting",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "be60698473ad4b614989672a370a11db",
@@ -43,8 +43,8 @@
     "hash": "1edca9fd90c5a1a55cbec58141a7a6738d7399ce60c145b303b5837c581fc675",
     "envNames": []
   },
-  "bindings": [],
-  "providerVersion": 0,
   "downstream": [],
+  "providerVersion": 0,
+  "bindings": [],
   "removalPolicy": "destroy"
 }
