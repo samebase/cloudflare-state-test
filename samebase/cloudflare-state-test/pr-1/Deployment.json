@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "db53e011c403999ef33c9e416fb47200",
@@ -32,8 +32,19 @@
     },
     "rootDir": "."
   },
-  "providerVersion": 0,
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "intent-spoonbill-8",
+    "reference": "preview/pr-1",
+    "previewName": "pr-1",
+    "url": "https://intent-spoonbill-8.convex.cloud",
+    "siteUrl": "https://intent-spoonbill-8.convex.site",
+    "hash": "cad48462c993df31187b0c82a4a980bbd3e4013c14fc9f7f5872d0f7be8b231f",
+    "envNames": []
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
   "removalPolicy": "destroy"
 }
