@@ -3,7 +3,7 @@
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "be60698473ad4b614989672a370a11db",
-  "downstream": [],
+  "resourceType": "Convex.Deployment",
   "props": {
     "project": {
       "projectId": 3426180,
@@ -33,7 +33,7 @@
     "rootDir": "."
   },
   "providerVersion": 0,
-  "resourceType": "Convex.Deployment",
   "bindings": [],
+  "downstream": [],
   "removalPolicy": "destroy"
 }
