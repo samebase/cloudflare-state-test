@@ -1,5 +1,5 @@
 {
-  "status": "updating",
+  "status": "updated",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "54db56d449ba3346ef82179abbb36e60",
@@ -38,59 +38,11 @@
     "reference": "production",
     "url": "https://elated-clam-974.convex.cloud",
     "siteUrl": "https://elated-clam-974.convex.site",
-    "hash": "c8967f5ca9033ce33c07042ee0d9a99b52f22ea18a4bc269c408a79530bc78ee",
+    "hash": "78693f11ee90affc0855e182452d24beaeb624640791ad2e78e844fdd06642e9",
     "envNames": []
   },
-  "providerVersion": 0,
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
-  "old": {
-    "status": "updated",
-    "fqn": "Deployment",
-    "logicalId": "Deployment",
-    "instanceId": "54db56d449ba3346ef82179abbb36e60",
-    "resourceType": "Convex.Deployment",
-    "props": {
-      "project": {
-        "projectId": 3426180,
-        "slug": "cloudflare-state-test",
-        "name": "cloudflare-state-test",
-        "teamId": 38516,
-        "prodDeploymentName": "elated-clam-974",
-        "prodDeploymentUrl": "https://elated-clam-974.convex.cloud"
-      },
-      "type": "prod",
-      "source": {
-        "path": "./convex",
-        "command": [
-          "node",
-          "--run",
-          "deploy"
-        ],
-        "include": [
-          "src/**",
-          "public/**",
-          "scripts/**",
-          "vite.config.ts",
-          "tsconfig*.json"
-        ]
-      },
-      "rootDir": "."
-    },
-    "attr": {
-      "projectId": 3426180,
-      "type": "prod",
-      "name": "elated-clam-974",
-      "reference": "production",
-      "url": "https://elated-clam-974.convex.cloud",
-      "siteUrl": "https://elated-clam-974.convex.site",
-      "hash": "c8967f5ca9033ce33c07042ee0d9a99b52f22ea18a4bc269c408a79530bc78ee",
-      "envNames": []
-    },
-    "bindings": [],
-    "providerVersion": 0,
-    "downstream": [],
-    "removalPolicy": "retain"
-  },
   "removalPolicy": "retain"
 }
