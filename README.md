@@ -21,7 +21,7 @@ import * as GitHubState from "@samebase/alchemy-kit/github-state";
 export default Alchemy.Stack(
   repository,
   {
-    providers: Layer.mergeAll(Convex.providers(), IdentityBroker.providers()),
+    providers: Convex.providers(),
     state: Convex.withRunRecord(GitHubState.state()),
   },
   program,
