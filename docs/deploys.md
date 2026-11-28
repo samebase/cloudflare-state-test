@@ -5,11 +5,11 @@ preview deployment named after the stage, which `alchemy destroy` deletes. The p
 Convex deployment resource when the functions, the build inputs, `package.json`, or the lockfile
 change; an unchanged checkout deploys nothing.
 
-`.github/workflows/alchemy.yml` names the stages as
-[Alchemy's CI guide](https://alchemy.run/environments/ci) does: it deploys each push to `main` to
-the stage `prod`, deploys each pull request from this repository to the stage `pr-<number>`, a
-preview deployment with that name whose URL, `https://<deployment>.convex.site`, the run comments on
-the pull request, and destroys that stage when the pull request closes, all with the team token
+`.github/workflows/alchemy.yml` calls the shared deploy workflow of samebase/samebase, which names
+the stages as [Alchemy's CI guide](https://alchemy.run/environments/ci) does: it deploys each push
+to `main` to the stage `prod`, deploys each pull request from this repository to the stage
+`pr-<number>`, a preview deployment with that name, keeps one comment on the pull request with the
+stacks and their addresses, and destroys that stage when the pull request closes, all with the team token
 `CONVEX_ACCESS_TOKEN`. The token names its team, and creates the Convex project of the repository
 and the short-lived deploy keys of each run. No deploy key is stored anywhere.
 
