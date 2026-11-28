@@ -1,0 +1,16 @@
+{
+  "url": "https://ceaseless-coyote-350.convex.site",
+  "samebase.run": {
+    "version": 2,
+    "repositoryId": "1455706513",
+    "repositoryOwnerId": "285392744",
+    "repositoryName": "samebase/cloudflare-state-test",
+    "stackFile": "alchemy.run.ts",
+    "branch": "renovate/lock-file-maintenance",
+    "pullRequest": 3,
+    "headCommit": "8abf887359a12a706608e1e615d791aa2e5b904e",
+    "runUrl": "https://github.com/samebase/cloudflare-state-test/actions/runs/46183744591/attempts/1",
+    "source": "github-actions",
+    "recordedAt": "2026-11-28T19:57:08.899Z"
+  }
+}
