@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "be60698473ad4b614989672a370a11db",
@@ -32,8 +32,19 @@
     },
     "rootDir": "."
   },
-  "providerVersion": 0,
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "decisive-ermine-508",
+    "reference": "preview/pr-11",
+    "previewName": "pr-11",
+    "url": "https://decisive-ermine-508.convex.cloud",
+    "siteUrl": "https://decisive-ermine-508.convex.site",
+    "hash": "1edca9fd90c5a1a55cbec58141a7a6738d7399ce60c145b303b5837c581fc675",
+    "envNames": []
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
   "removalPolicy": "destroy"
 }
