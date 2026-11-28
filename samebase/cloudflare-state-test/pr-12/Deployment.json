@@ -1,5 +1,5 @@
 {
-  "status": "creating",
+  "status": "created",
   "fqn": "Deployment",
   "logicalId": "Deployment",
   "instanceId": "a55f8d328a94553f0314b094d5dcecf9",
@@ -32,8 +32,19 @@
     },
     "rootDir": "."
   },
-  "providerVersion": 0,
+  "attr": {
+    "projectId": 3426180,
+    "type": "preview",
+    "name": "knowing-rooster-585",
+    "reference": "preview/pr-12",
+    "previewName": "pr-12",
+    "url": "https://knowing-rooster-585.convex.cloud",
+    "siteUrl": "https://knowing-rooster-585.convex.site",
+    "hash": "a07273155a4d4a4ba53388de96e32aa082bf27f9d03beae3aca9966a0f6f386f",
+    "envNames": []
+  },
   "bindings": [],
+  "providerVersion": 0,
   "downstream": [],
   "removalPolicy": "destroy"
 }
